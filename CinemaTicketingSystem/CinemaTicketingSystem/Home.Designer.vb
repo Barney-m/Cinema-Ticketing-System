@@ -221,6 +221,9 @@ Partial Class Home
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Home"
         Me.Text = "Overview"
         Me.Panel1.ResumeLayout(False)
