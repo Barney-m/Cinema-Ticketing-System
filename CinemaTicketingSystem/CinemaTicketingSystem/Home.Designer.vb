@@ -156,13 +156,13 @@ Partial Class Home
         '
         'lblName
         '
-        Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.Location = New System.Drawing.Point(67, 187)
+        Me.lblName.Location = New System.Drawing.Point(0, 187)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(65, 24)
+        Me.lblName.Size = New System.Drawing.Size(210, 24)
         Me.lblName.TabIndex = 2
         Me.lblName.Text = "Name"
+        Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
