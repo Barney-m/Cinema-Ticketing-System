@@ -48,13 +48,8 @@ Partial Class Movie
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.movieName = New System.Windows.Forms.Label()
         Me.MovieDetailsContainer = New System.Windows.Forms.Panel()
-        Me.movieImageBox = New System.Windows.Forms.PictureBox()
-        Me.movieTitle = New System.Windows.Forms.Label()
-        Me.movieDesc = New System.Windows.Forms.Label()
-        Me.movieGenre = New System.Windows.Forms.Label()
-        Me.movieLength = New System.Windows.Forms.Label()
-        Me.movieRating = New System.Windows.Forms.Label()
         Me.btnNext = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,7 +62,6 @@ Partial Class Movie
         Me.MovieDetailsBar.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MovieDetailsContainer.SuspendLayout()
-        CType(Me.movieImageBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox5
@@ -312,73 +306,12 @@ Partial Class Movie
         'MovieDetailsContainer
         '
         Me.MovieDetailsContainer.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.MovieDetailsContainer.Controls.Add(Me.ComboBox1)
         Me.MovieDetailsContainer.Controls.Add(Me.btnNext)
-        Me.MovieDetailsContainer.Controls.Add(Me.movieRating)
-        Me.MovieDetailsContainer.Controls.Add(Me.movieLength)
-        Me.MovieDetailsContainer.Controls.Add(Me.movieGenre)
-        Me.MovieDetailsContainer.Controls.Add(Me.movieDesc)
-        Me.MovieDetailsContainer.Controls.Add(Me.movieTitle)
-        Me.MovieDetailsContainer.Controls.Add(Me.movieImageBox)
         Me.MovieDetailsContainer.Location = New System.Drawing.Point(25, 65)
         Me.MovieDetailsContainer.Name = "MovieDetailsContainer"
         Me.MovieDetailsContainer.Size = New System.Drawing.Size(1001, 483)
         Me.MovieDetailsContainer.TabIndex = 1
-        '
-        'movieImageBox
-        '
-        Me.movieImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.movieImageBox.Location = New System.Drawing.Point(62, 22)
-        Me.movieImageBox.Name = "movieImageBox"
-        Me.movieImageBox.Size = New System.Drawing.Size(209, 182)
-        Me.movieImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.movieImageBox.TabIndex = 0
-        Me.movieImageBox.TabStop = False
-        '
-        'movieTitle
-        '
-        Me.movieTitle.AutoSize = True
-        Me.movieTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.movieTitle.Location = New System.Drawing.Point(291, 32)
-        Me.movieTitle.Name = "movieTitle"
-        Me.movieTitle.Size = New System.Drawing.Size(223, 46)
-        Me.movieTitle.TabIndex = 1
-        Me.movieTitle.Text = "Movie Title"
-        '
-        'movieDesc
-        '
-        Me.movieDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.movieDesc.Location = New System.Drawing.Point(299, 87)
-        Me.movieDesc.Name = "movieDesc"
-        Me.movieDesc.Size = New System.Drawing.Size(665, 117)
-        Me.movieDesc.TabIndex = 2
-        Me.movieDesc.Text = "Movie Description"
-        '
-        'movieGenre
-        '
-        Me.movieGenre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.movieGenre.Location = New System.Drawing.Point(62, 224)
-        Me.movieGenre.Name = "movieGenre"
-        Me.movieGenre.Size = New System.Drawing.Size(209, 23)
-        Me.movieGenre.TabIndex = 3
-        Me.movieGenre.Text = "Genre: "
-        '
-        'movieLength
-        '
-        Me.movieLength.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.movieLength.Location = New System.Drawing.Point(62, 262)
-        Me.movieLength.Name = "movieLength"
-        Me.movieLength.Size = New System.Drawing.Size(209, 23)
-        Me.movieLength.TabIndex = 4
-        Me.movieLength.Text = "Length:"
-        '
-        'movieRating
-        '
-        Me.movieRating.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.movieRating.Location = New System.Drawing.Point(62, 301)
-        Me.movieRating.Name = "movieRating"
-        Me.movieRating.Size = New System.Drawing.Size(209, 23)
-        Me.movieRating.TabIndex = 5
-        Me.movieRating.Text = "Rating:"
         '
         'btnNext
         '
@@ -389,6 +322,14 @@ Partial Class Movie
         Me.btnNext.TabIndex = 6
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(405, 168)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(191, 21)
+        Me.ComboBox1.TabIndex = 7
         '
         'Movie
         '
@@ -415,8 +356,6 @@ Partial Class Movie
         Me.MovieDetailsBar.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MovieDetailsContainer.ResumeLayout(False)
-        Me.MovieDetailsContainer.PerformLayout()
-        CType(Me.movieImageBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -446,10 +385,5 @@ Partial Class Movie
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents MovieDetailsContainer As Panel
     Friend WithEvents btnNext As Button
-    Friend WithEvents movieRating As Label
-    Friend WithEvents movieLength As Label
-    Friend WithEvents movieGenre As Label
-    Friend WithEvents movieDesc As Label
-    Friend WithEvents movieTitle As Label
-    Friend WithEvents movieImageBox As PictureBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
