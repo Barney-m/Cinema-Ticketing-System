@@ -192,9 +192,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AstronomiaDb %281%29.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="images\back.png" />
     <Content Include="images\Dance Bound.png" />
     <Content Include="images\logo.png" />
