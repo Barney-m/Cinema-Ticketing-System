@@ -56,15 +56,20 @@ Public Class staffAssign
         conn.Close()
 
         Dim EncPassword As String
-            Dim int As Integer = result.Substring(1, 7)
-            Dim regex As Regex = New Regex("^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
-            Dim isValid As Boolean = regex.IsMatch(txtEmail.Text.Trim)
-            Dim salary As Integer = 0
-            Dim job As Integer = 1
-            int += 1
-            result = "S" + int.ToString()
 
-            EncPassword = encode(Trim(txtPassword.Text))
+        Dim int As Integer = result.Substring(1, 7)
+
+        Dim regex As Regex = New Regex("^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
+        Dim isValid As Boolean = regex.IsMatch(txtEmail.Text.Trim)
+        Dim salary As Integer = 0
+        Dim theDate As String = DTdob.Value.ToShortDateString()
+
+        Dim job As Integer = 1
+        int += 1
+
+        result = "S" + int.ToString()
+
+        EncPassword = encode(Trim(txtPassword.Text))
 
 
             If txtName.Text = "" Then
@@ -87,24 +92,26 @@ Public Class staffAssign
             Else
 
 
-                conn.Open()
-                Dim query As String = "insert into Employees (EmployeeID,Full_Name,Birth_Date,Phone_No,Address,[E-mail],Salary,JobID,Status,[Password]) values (?,?,?,?,?,?,?,?,?,?)"
-                cmd = New OleDbCommand(query, conn)
-                cmd.Parameters.AddWithValue("@id", result)
-                cmd.Parameters.AddWithValue("@name", txtName.Text)
-                cmd.Parameters.AddWithValue("@dob", DTdob)
-                cmd.Parameters.AddWithValue("@phone", txtPhone.Text)
-                cmd.Parameters.AddWithValue("@address", txtAddress.Text)
-                cmd.Parameters.AddWithValue("@email", txtEmail.Text)
-                cmd.Parameters.AddWithValue("@salary", salary)
-                cmd.Parameters.AddWithValue("@job", job)
-                cmd.Parameters.AddWithValue("@status", CbStatus.Text)
-                cmd.Parameters.AddWithValue("@password", EncPassword)
+            conn.Open()
+
+            Dim query As String = "insert into Employees (EmployeeID,Full_Name,Birth_Date,Phone_No,Address,[E-mail],Salary,JobID,Status,[Password]) values (?,?,?,?,?,?,?,?,?,?)"
+
+            cmd = New OleDbCommand(query, conn)
+            cmd.Parameters.AddWithValue("@id", result)
+            cmd.Parameters.AddWithValue("@name", txtName.Text)
+            cmd.Parameters.AddWithValue("@dob", theDate)
+            cmd.Parameters.AddWithValue("@phone", txtPhone.Text)
+            cmd.Parameters.AddWithValue("@address", txtAddress.Text)
+            cmd.Parameters.AddWithValue("@email", txtEmail.Text)
+            cmd.Parameters.AddWithValue("@salary", salary)
+            cmd.Parameters.AddWithValue("@job", job)
+            cmd.Parameters.AddWithValue("@status", CbStatus.Text)
+            cmd.Parameters.AddWithValue("@password", EncPassword)
 
 
 
 
-                cmd.ExecuteNonQuery()
+            cmd.ExecuteNonQuery()
                 conn.Close()
 
                 MessageBox.Show("New Staff Added !")
