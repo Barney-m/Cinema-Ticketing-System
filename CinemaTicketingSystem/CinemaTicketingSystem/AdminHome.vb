@@ -63,4 +63,11 @@
         pl3 = 92
     End Sub
 
+    Private Sub btnSignOut_Click(sender As Object, e As EventArgs) Handles btnSignOut.Click
+
+    End Sub
+
+    Private Sub btnAddStaff_Click(sender As Object, e As EventArgs) Handles btnAddStaff.Click
+        staffAssign.Show(Me)
+    End Sub
 End Class
