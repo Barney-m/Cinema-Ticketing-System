@@ -127,6 +127,12 @@
     <Compile Include="Payment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="staffAssign.Designer.vb">
+      <DependentUpon>staffAssign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staffAssign.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="userProfile.Designer.vb">
       <DependentUpon>userProfile.vb</DependentUpon>
     </Compile>

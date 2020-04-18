@@ -72,24 +72,24 @@ Public Class staffAssign
         EncPassword = encode(Trim(txtPassword.Text))
 
 
-            If txtName.Text = "" Then
-                MessageBox.Show("Please enter your full name.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ElseIf txtPassword.Text = "" Then
-                MessageBox.Show("Please enter your password.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ElseIf txtPassword.Text.Length < 6 Then
-                MessageBox.Show("The password should be minimum 6 character.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ElseIf txtEmail.Text = "" Then
-                MessageBox.Show("Please enter email.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ElseIf Not isValid Then
-                MessageBox.Show("Invalid Email.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ElseIf txtAddress.Text = "" Then
-                MessageBox.Show("Please Enter your address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ElseIf txtPhone.Text = "" Then
-                MessageBox.Show("Please Enter your phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ElseIf CbStatus.Text = "" Then
-                MessageBox.Show("Please Enter your Status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        If txtName.Text = "" Then
+            MessageBox.Show("Please enter your full name.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtPassword.Text = "" Then
+            MessageBox.Show("Please enter your password.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtPassword.Text.Length < 6 Then
+            MessageBox.Show("The password should be minimum 6 character.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtEmail.Text = "" Then
+            MessageBox.Show("Please enter email.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf Not isValid Then
+            MessageBox.Show("Invalid Email.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtAddress.Text = "" Then
+            MessageBox.Show("Please Enter your address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtPhone.Text = "" Then
+            MessageBox.Show("Please Enter your phone number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf CbStatus.Text = "" Then
+            MessageBox.Show("Please Enter your Status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
-            Else
+        Else
 
 
             conn.Open()
@@ -112,18 +112,18 @@ Public Class staffAssign
 
 
             cmd.ExecuteNonQuery()
-                conn.Close()
+            conn.Close()
 
-                MessageBox.Show("New Staff Added !")
-                txtName.Text = ""
-                txtAddress.Text = ""
-                txtEmail.Text = ""
-                txtPassword.Text = ""
-                txtPhone.Text = ""
-                CbStatus.Text = ""
-                updatedgv()
+            MessageBox.Show("New Staff Added !")
+            txtName.Text = ""
+            txtAddress.Text = ""
+            txtEmail.Text = ""
+            txtPassword.Text = ""
+            txtPhone.Text = ""
+            CbStatus.Text = ""
+            updatedgv()
 
-            End If
+        End If
 
 
     End Sub
