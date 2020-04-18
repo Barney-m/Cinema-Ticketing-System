@@ -186,13 +186,18 @@
     <Content Include="AstronomiaDb %281%29.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="images\Avengers.jpg" />
     <Content Include="images\back.png" />
-    <Content Include="images\Dance Bound.png" />
+    <Content Include="images\DanceBound.png" />
+    <Content Include="images\GrownUps.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\movielogo.png" />
     <Content Include="images\overviewlogo.png" />
+    <Content Include="images\Parasite.jpg" />
     <Content Include="images\profilelogo.png" />
     <Content Include="images\signoutlogo.png" />
+    <Content Include="images\SpidermanFarFromHome.jpg" />
+    <Content Include="images\TheIncredibles2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -41,15 +41,15 @@ Partial Class Movie
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.MovieDetailsPanel = New System.Windows.Forms.Panel()
-        Me.MovieDetailsContainer = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.btnNext = New System.Windows.Forms.Button()
-        Me.MovieDetailsBar = New System.Windows.Forms.Panel()
-        Me.movieName = New System.Windows.Forms.Label()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.MovieListView = New System.Windows.Forms.ListView()
         Me.MovieImg = New System.Windows.Forms.ImageList(Me.components)
+        Me.MovieDetailsContainer = New System.Windows.Forms.Panel()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.MovieDetailsPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.movieName = New System.Windows.Forms.Label()
+        Me.MovieDetailsBar = New System.Windows.Forms.Panel()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,10 +58,10 @@ Partial Class Movie
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.MovieDetailsPanel.SuspendLayout()
         Me.MovieDetailsContainer.SuspendLayout()
-        Me.MovieDetailsBar.SuspendLayout()
+        Me.MovieDetailsPanel.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MovieDetailsBar.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox5
@@ -247,73 +247,6 @@ Partial Class Movie
         Me.Panel3.Size = New System.Drawing.Size(1051, 581)
         Me.Panel3.TabIndex = 30
         '
-        'MovieDetailsPanel
-        '
-        Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsContainer)
-        Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsBar)
-        Me.MovieDetailsPanel.Location = New System.Drawing.Point(351, 282)
-        Me.MovieDetailsPanel.Name = "MovieDetailsPanel"
-        Me.MovieDetailsPanel.Size = New System.Drawing.Size(1051, 581)
-        Me.MovieDetailsPanel.TabIndex = 1
-        '
-        'MovieDetailsContainer
-        '
-        Me.MovieDetailsContainer.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MovieDetailsContainer.Controls.Add(Me.ComboBox1)
-        Me.MovieDetailsContainer.Controls.Add(Me.btnNext)
-        Me.MovieDetailsContainer.Location = New System.Drawing.Point(197, 191)
-        Me.MovieDetailsContainer.Name = "MovieDetailsContainer"
-        Me.MovieDetailsContainer.Size = New System.Drawing.Size(1001, 483)
-        Me.MovieDetailsContainer.TabIndex = 1
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(413, 189)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(191, 21)
-        Me.ComboBox1.TabIndex = 7
-        '
-        'btnNext
-        '
-        Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNext.Location = New System.Drawing.Point(428, 379)
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(157, 65)
-        Me.btnNext.TabIndex = 6
-        Me.btnNext.Text = "Next"
-        Me.btnNext.UseVisualStyleBackColor = True
-        '
-        'MovieDetailsBar
-        '
-        Me.MovieDetailsBar.BackColor = System.Drawing.Color.DarkGray
-        Me.MovieDetailsBar.Controls.Add(Me.movieName)
-        Me.MovieDetailsBar.Controls.Add(Me.PictureBox6)
-        Me.MovieDetailsBar.Location = New System.Drawing.Point(0, 0)
-        Me.MovieDetailsBar.Name = "MovieDetailsBar"
-        Me.MovieDetailsBar.Size = New System.Drawing.Size(1051, 39)
-        Me.MovieDetailsBar.TabIndex = 0
-        '
-        'movieName
-        '
-        Me.movieName.AutoSize = True
-        Me.movieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.movieName.Location = New System.Drawing.Point(65, 4)
-        Me.movieName.Name = "movieName"
-        Me.movieName.Size = New System.Drawing.Size(175, 31)
-        Me.movieName.TabIndex = 1
-        Me.movieName.Text = "Movie Name"
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(6, 3)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(53, 33)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 0
-        Me.PictureBox6.TabStop = False
-        '
         'MovieListView
         '
         Me.MovieListView.BackColor = System.Drawing.Color.Silver
@@ -330,6 +263,78 @@ Partial Class Movie
         Me.MovieImg.ImageStream = CType(resources.GetObject("MovieImg.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.MovieImg.TransparentColor = System.Drawing.Color.Transparent
         Me.MovieImg.Images.SetKeyName(0, "Dance Bound.png")
+        Me.MovieImg.Images.SetKeyName(1, "Parasite.jpg")
+        Me.MovieImg.Images.SetKeyName(2, "profilelogo.png")
+        Me.MovieImg.Images.SetKeyName(3, "signoutlogo.png")
+        Me.MovieImg.Images.SetKeyName(4, "SpidermanFarFromHome.jpg")
+        Me.MovieImg.Images.SetKeyName(5, "TheIncredibles2.jpg")
+        '
+        'MovieDetailsContainer
+        '
+        Me.MovieDetailsContainer.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.MovieDetailsContainer.Controls.Add(Me.ComboBox1)
+        Me.MovieDetailsContainer.Controls.Add(Me.btnNext)
+        Me.MovieDetailsContainer.Location = New System.Drawing.Point(197, 191)
+        Me.MovieDetailsContainer.Name = "MovieDetailsContainer"
+        Me.MovieDetailsContainer.Size = New System.Drawing.Size(1001, 483)
+        Me.MovieDetailsContainer.TabIndex = 1
+        '
+        'btnNext
+        '
+        Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNext.Location = New System.Drawing.Point(428, 379)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(157, 65)
+        Me.btnNext.TabIndex = 6
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(413, 189)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(191, 21)
+        Me.ComboBox1.TabIndex = 7
+        '
+        'MovieDetailsPanel
+        '
+        Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsContainer)
+        Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsBar)
+        Me.MovieDetailsPanel.Location = New System.Drawing.Point(351, 282)
+        Me.MovieDetailsPanel.Name = "MovieDetailsPanel"
+        Me.MovieDetailsPanel.Size = New System.Drawing.Size(1051, 581)
+        Me.MovieDetailsPanel.TabIndex = 1
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(6, 3)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(53, 33)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 0
+        Me.PictureBox6.TabStop = False
+        '
+        'movieName
+        '
+        Me.movieName.AutoSize = True
+        Me.movieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.movieName.Location = New System.Drawing.Point(65, 4)
+        Me.movieName.Name = "movieName"
+        Me.movieName.Size = New System.Drawing.Size(175, 31)
+        Me.movieName.TabIndex = 1
+        Me.movieName.Text = "Movie Name"
+        '
+        'MovieDetailsBar
+        '
+        Me.MovieDetailsBar.BackColor = System.Drawing.Color.DarkGray
+        Me.MovieDetailsBar.Controls.Add(Me.movieName)
+        Me.MovieDetailsBar.Controls.Add(Me.PictureBox6)
+        Me.MovieDetailsBar.Location = New System.Drawing.Point(0, 0)
+        Me.MovieDetailsBar.Name = "MovieDetailsBar"
+        Me.MovieDetailsBar.Size = New System.Drawing.Size(1051, 39)
+        Me.MovieDetailsBar.TabIndex = 0
         '
         'Movie
         '
@@ -351,11 +356,11 @@ Partial Class Movie
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
-        Me.MovieDetailsPanel.ResumeLayout(False)
         Me.MovieDetailsContainer.ResumeLayout(False)
+        Me.MovieDetailsPanel.ResumeLayout(False)
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MovieDetailsBar.ResumeLayout(False)
         Me.MovieDetailsBar.PerformLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -380,10 +385,10 @@ Partial Class Movie
     Friend WithEvents MovieListView As ListView
     Friend WithEvents MovieImg As ImageList
     Friend WithEvents MovieDetailsPanel As Panel
+    Friend WithEvents MovieDetailsContainer As Panel
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents btnNext As Button
     Friend WithEvents MovieDetailsBar As Panel
     Friend WithEvents movieName As Label
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents MovieDetailsContainer As Panel
-    Friend WithEvents btnNext As Button
-    Friend WithEvents ComboBox1 As ComboBox
 End Class
