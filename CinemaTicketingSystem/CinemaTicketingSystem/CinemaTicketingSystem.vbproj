@@ -121,10 +121,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="staffAssign.Designer.vb">
-      <DependentUpon>staffAssign.vb</DependentUpon>
-    </Compile>
-    <Compile Include="staffAssign.vb">
     <Compile Include="Payment.Designer.vb">
       <DependentUpon>Payment.vb</DependentUpon>
     </Compile>
