@@ -28,9 +28,8 @@ Partial Class staffAssign
         Me.btnSignOut = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DTdob = New System.Windows.Forms.DateTimePicker()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.EmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me._AstronomiaDb__1_DataSet = New CinemaTicketingSystem._AstronomiaDb__1_DataSet()
         Me.CbStatus = New System.Windows.Forms.ComboBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtAddress = New System.Windows.Forms.TextBox()
@@ -43,12 +42,13 @@ Partial Class staffAssign
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
+        Me.EmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._AstronomiaDb__1_DataSet = New CinemaTicketingSystem._AstronomiaDb__1_DataSet()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.EmployeesTableAdapter = New CinemaTicketingSystem._AstronomiaDb__1_DataSetTableAdapters.EmployeesTableAdapter()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.DTdob = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -117,6 +117,13 @@ Partial Class staffAssign
         Me.Panel2.Size = New System.Drawing.Size(430, 378)
         Me.Panel2.TabIndex = 2
         '
+        'DTdob
+        '
+        Me.DTdob.Location = New System.Drawing.Point(137, 79)
+        Me.DTdob.Name = "DTdob"
+        Me.DTdob.Size = New System.Drawing.Size(253, 20)
+        Me.DTdob.TabIndex = 20
+        '
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(137, 196)
@@ -125,16 +132,6 @@ Partial Class staffAssign
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(253, 25)
         Me.txtEmail.TabIndex = 19
-        '
-        'EmployeesBindingSource
-        '
-        Me.EmployeesBindingSource.DataMember = "Employees"
-        Me.EmployeesBindingSource.DataSource = Me._AstronomiaDb__1_DataSet
-        '
-        '_AstronomiaDb__1_DataSet
-        '
-        Me._AstronomiaDb__1_DataSet.DataSetName = "_AstronomiaDb__1_DataSet"
-        Me._AstronomiaDb__1_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CbStatus
         '
@@ -252,12 +249,22 @@ Partial Class staffAssign
         Me.lblName.TabIndex = 0
         Me.lblName.Text = "Full Name :"
         '
+        'EmployeesBindingSource
+        '
+        Me.EmployeesBindingSource.DataMember = "Employees"
+        Me.EmployeesBindingSource.DataSource = Me._AstronomiaDb__1_DataSet
+        '
+        '_AstronomiaDb__1_DataSet
+        '
+        Me._AstronomiaDb__1_DataSet.DataSetName = "_AstronomiaDb__1_DataSet"
+        Me._AstronomiaDb__1_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.dgv)
         Me.Panel3.Location = New System.Drawing.Point(504, 135)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(730, 320)
+        Me.Panel3.Size = New System.Drawing.Size(730, 349)
         Me.Panel3.TabIndex = 3
         '
         'dgv
@@ -265,7 +272,7 @@ Partial Class staffAssign
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv.Location = New System.Drawing.Point(0, 0)
         Me.dgv.Name = "dgv"
-        Me.dgv.Size = New System.Drawing.Size(730, 317)
+        Me.dgv.Size = New System.Drawing.Size(730, 349)
         Me.dgv.TabIndex = 0
         '
         'EmployeesTableAdapter
@@ -274,7 +281,7 @@ Partial Class staffAssign
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(504, 473)
+        Me.btnSave.Location = New System.Drawing.Point(504, 490)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 4
@@ -283,19 +290,12 @@ Partial Class staffAssign
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(585, 473)
+        Me.btnCancel.Location = New System.Drawing.Point(585, 490)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 8
         Me.btnCancel.Text = "Close"
         Me.btnCancel.UseVisualStyleBackColor = True
-        '
-        'DTdob
-        '
-        Me.DTdob.Location = New System.Drawing.Point(137, 79)
-        Me.DTdob.Name = "DTdob"
-        Me.DTdob.Size = New System.Drawing.Size(253, 20)
-        Me.DTdob.TabIndex = 20
         '
         'staffAssign
         '
