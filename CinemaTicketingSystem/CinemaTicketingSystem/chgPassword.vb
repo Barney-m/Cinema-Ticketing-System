@@ -16,8 +16,9 @@ Public Class chgPassword
             Throw (New Exception("Error is base64code" & ex.Message))
         End Try
     End Function
-
+  
     Dim id As String = PubVar
+  
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim oldpass As String
         Dim confirmPass As String
