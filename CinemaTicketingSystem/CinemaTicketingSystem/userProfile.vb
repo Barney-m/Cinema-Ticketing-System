@@ -80,4 +80,8 @@ Public Class userProfile
         Login.txtID.Clear()
         Login.txtPass.Clear()
     End Sub
+
+    Private Sub btnChgPass_Click(sender As Object, e As EventArgs) Handles btnChgPass.Click
+        chgPassword.Show(Me)
+    End Sub
 End Class
