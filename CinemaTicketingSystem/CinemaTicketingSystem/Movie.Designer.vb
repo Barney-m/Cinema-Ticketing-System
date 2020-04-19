@@ -41,15 +41,16 @@ Partial Class Movie
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnNext1 = New System.Windows.Forms.Button()
+        Me.MovieDetailsPanel = New System.Windows.Forms.Panel()
+        Me.MovieDetailsContainer = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.MovieDetailsBar = New System.Windows.Forms.Panel()
+        Me.movieName = New System.Windows.Forms.Label()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.MovieListView = New System.Windows.Forms.ListView()
         Me.MovieImg = New System.Windows.Forms.ImageList(Me.components)
-        Me.MovieDetailsContainer = New System.Windows.Forms.Panel()
-        Me.btnNext = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.MovieDetailsPanel = New System.Windows.Forms.Panel()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.movieName = New System.Windows.Forms.Label()
-        Me.MovieDetailsBar = New System.Windows.Forms.Panel()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,10 +59,10 @@ Partial Class Movie
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.MovieDetailsContainer.SuspendLayout()
         Me.MovieDetailsPanel.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MovieDetailsContainer.SuspendLayout()
         Me.MovieDetailsBar.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox5
@@ -240,6 +241,7 @@ Partial Class Movie
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Silver
+        Me.Panel3.Controls.Add(Me.btnNext1)
         Me.Panel3.Controls.Add(Me.MovieDetailsPanel)
         Me.Panel3.Controls.Add(Me.MovieListView)
         Me.Panel3.Location = New System.Drawing.Point(213, 100)
@@ -247,37 +249,42 @@ Partial Class Movie
         Me.Panel3.Size = New System.Drawing.Size(1051, 581)
         Me.Panel3.TabIndex = 30
         '
-        'MovieListView
+        'btnNext1
         '
-        Me.MovieListView.BackColor = System.Drawing.Color.Silver
-        Me.MovieListView.HideSelection = False
-        Me.MovieListView.LargeImageList = Me.MovieImg
-        Me.MovieListView.Location = New System.Drawing.Point(0, 0)
-        Me.MovieListView.Name = "MovieListView"
-        Me.MovieListView.Size = New System.Drawing.Size(1051, 581)
-        Me.MovieListView.TabIndex = 0
-        Me.MovieListView.UseCompatibleStateImageBehavior = False
+        Me.btnNext1.Location = New System.Drawing.Point(25, 7)
+        Me.btnNext1.Name = "btnNext1"
+        Me.btnNext1.Size = New System.Drawing.Size(75, 23)
+        Me.btnNext1.TabIndex = 2
+        Me.btnNext1.Text = "Button1"
+        Me.btnNext1.UseVisualStyleBackColor = True
         '
-        'MovieImg
+        'MovieDetailsPanel
         '
-        Me.MovieImg.ImageStream = CType(resources.GetObject("MovieImg.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.MovieImg.TransparentColor = System.Drawing.Color.Transparent
-        Me.MovieImg.Images.SetKeyName(0, "Dance Bound.png")
-        Me.MovieImg.Images.SetKeyName(1, "Parasite.jpg")
-        Me.MovieImg.Images.SetKeyName(2, "profilelogo.png")
-        Me.MovieImg.Images.SetKeyName(3, "signoutlogo.png")
-        Me.MovieImg.Images.SetKeyName(4, "SpidermanFarFromHome.jpg")
-        Me.MovieImg.Images.SetKeyName(5, "TheIncredibles2.jpg")
+        Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsContainer)
+        Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsBar)
+        Me.MovieDetailsPanel.Location = New System.Drawing.Point(0, 0)
+        Me.MovieDetailsPanel.Name = "MovieDetailsPanel"
+        Me.MovieDetailsPanel.Size = New System.Drawing.Size(1051, 581)
+        Me.MovieDetailsPanel.TabIndex = 1
+        Me.MovieDetailsPanel.Visible = False
         '
         'MovieDetailsContainer
         '
         Me.MovieDetailsContainer.BackColor = System.Drawing.Color.WhiteSmoke
         Me.MovieDetailsContainer.Controls.Add(Me.ComboBox1)
         Me.MovieDetailsContainer.Controls.Add(Me.btnNext)
-        Me.MovieDetailsContainer.Location = New System.Drawing.Point(197, 191)
+        Me.MovieDetailsContainer.Location = New System.Drawing.Point(25, 65)
         Me.MovieDetailsContainer.Name = "MovieDetailsContainer"
         Me.MovieDetailsContainer.Size = New System.Drawing.Size(1001, 483)
         Me.MovieDetailsContainer.TabIndex = 1
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(413, 189)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(191, 21)
+        Me.ComboBox1.TabIndex = 7
         '
         'btnNext
         '
@@ -289,32 +296,15 @@ Partial Class Movie
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'MovieDetailsBar
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(413, 189)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(191, 21)
-        Me.ComboBox1.TabIndex = 7
-        '
-        'MovieDetailsPanel
-        '
-        Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsContainer)
-        Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsBar)
-        Me.MovieDetailsPanel.Location = New System.Drawing.Point(351, 282)
-        Me.MovieDetailsPanel.Name = "MovieDetailsPanel"
-        Me.MovieDetailsPanel.Size = New System.Drawing.Size(1051, 581)
-        Me.MovieDetailsPanel.TabIndex = 1
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(6, 3)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(53, 33)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 0
-        Me.PictureBox6.TabStop = False
+        Me.MovieDetailsBar.BackColor = System.Drawing.Color.DarkGray
+        Me.MovieDetailsBar.Controls.Add(Me.movieName)
+        Me.MovieDetailsBar.Controls.Add(Me.PictureBox6)
+        Me.MovieDetailsBar.Location = New System.Drawing.Point(0, 0)
+        Me.MovieDetailsBar.Name = "MovieDetailsBar"
+        Me.MovieDetailsBar.Size = New System.Drawing.Size(1051, 39)
+        Me.MovieDetailsBar.TabIndex = 0
         '
         'movieName
         '
@@ -326,15 +316,32 @@ Partial Class Movie
         Me.movieName.TabIndex = 1
         Me.movieName.Text = "Movie Name"
         '
-        'MovieDetailsBar
+        'PictureBox6
         '
-        Me.MovieDetailsBar.BackColor = System.Drawing.Color.DarkGray
-        Me.MovieDetailsBar.Controls.Add(Me.movieName)
-        Me.MovieDetailsBar.Controls.Add(Me.PictureBox6)
-        Me.MovieDetailsBar.Location = New System.Drawing.Point(0, 0)
-        Me.MovieDetailsBar.Name = "MovieDetailsBar"
-        Me.MovieDetailsBar.Size = New System.Drawing.Size(1051, 39)
-        Me.MovieDetailsBar.TabIndex = 0
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(6, 3)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(53, 33)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 0
+        Me.PictureBox6.TabStop = False
+        '
+        'MovieListView
+        '
+        Me.MovieListView.BackColor = System.Drawing.Color.Silver
+        Me.MovieListView.HideSelection = False
+        Me.MovieListView.LargeImageList = Me.MovieImg
+        Me.MovieListView.Location = New System.Drawing.Point(0, 35)
+        Me.MovieListView.Name = "MovieListView"
+        Me.MovieListView.Size = New System.Drawing.Size(1051, 546)
+        Me.MovieListView.TabIndex = 0
+        Me.MovieListView.UseCompatibleStateImageBehavior = False
+        '
+        'MovieImg
+        '
+        Me.MovieImg.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.MovieImg.ImageSize = New System.Drawing.Size(16, 16)
+        Me.MovieImg.TransparentColor = System.Drawing.Color.Transparent
         '
         'Movie
         '
@@ -356,11 +363,11 @@ Partial Class Movie
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
-        Me.MovieDetailsContainer.ResumeLayout(False)
         Me.MovieDetailsPanel.ResumeLayout(False)
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MovieDetailsContainer.ResumeLayout(False)
         Me.MovieDetailsBar.ResumeLayout(False)
         Me.MovieDetailsBar.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -391,4 +398,5 @@ Partial Class Movie
     Friend WithEvents MovieDetailsBar As Panel
     Friend WithEvents movieName As Label
     Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents btnNext1 As Button
 End Class

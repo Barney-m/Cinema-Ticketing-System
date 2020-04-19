@@ -48,12 +48,20 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -93,6 +101,12 @@
     <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InsertImage.Designer.vb">
+      <DependentUpon>InsertImage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InsertImage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -103,6 +117,12 @@
       <DependentUpon>Movie.vb</DependentUpon>
     </Compile>
     <Compile Include="Movie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovieImageInsertProtocol.Designer.vb">
+      <DependentUpon>MovieImageInsertProtocol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MovieImageInsertProtocol.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -155,11 +175,17 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InsertImage.resx">
+      <DependentUpon>InsertImage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movie.resx">
       <DependentUpon>Movie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieImageInsertProtocol.resx">
+      <DependentUpon>MovieImageInsertProtocol.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
