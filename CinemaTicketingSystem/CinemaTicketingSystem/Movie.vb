@@ -63,6 +63,7 @@ Public Class Movie
         If MovieListView.SelectedItems Is Nothing Then
             MsgBox("Please Select A Movie.")
         Else
+
             MovieListView.Hide()
             btnNext1.Hide()
             MovieDetailsPanel.Visible = True
@@ -92,7 +93,7 @@ Public Class Movie
     End Sub
 
     Sub MovieSchedule()
-
+        ComboBox1.Text = ""
         Dim cmd As New OleDbCommand
         conn.Open()
         cmd.CommandText = "SELECT * FROM MovieSchedule WHERE MovieID = ?"
