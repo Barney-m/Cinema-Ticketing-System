@@ -2,7 +2,7 @@
 
 Public Class userProfile
 
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PC\Desktop\AstronomiaDb.accdb;")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PC\Source\Repos\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb;")
     Dim cmd As OleDbCommand
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
@@ -13,8 +13,7 @@ Public Class userProfile
 
     End Sub
 
-    Dim id = PubVar
-
+    Dim id As String = PubVar
     Private Sub userProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -75,15 +74,10 @@ Public Class userProfile
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        id = ""
         PubVar = ""
-        Login.txtID.Text = ""
-        Login.txtPass.Text = ""
-
         Me.Close()
-
         Login.Show()
-
-
+        Login.txtID.Clear()
+        Login.txtPass.Clear()
     End Sub
 End Class

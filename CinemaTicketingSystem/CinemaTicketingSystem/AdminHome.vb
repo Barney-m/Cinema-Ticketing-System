@@ -64,11 +64,16 @@
     End Sub
 
     Private Sub btnSignOut_Click(sender As Object, e As EventArgs) Handles btnSignOut.Click
-
+        PubVar = ""
+        Me.Close()
+        Login.Show()
+        Login.txtID.Clear()
+        Login.txtPass.Clear()
     End Sub
 
     Private Sub btnAddStaff_Click(sender As Object, e As EventArgs) Handles btnAddStaff.Click
         staffAssign.Show(Me)
+        Me.Hide()
     End Sub
 
     Private Sub btnModifyStaff_Click(sender As Object, e As EventArgs) Handles btnModifyStaff.Click
