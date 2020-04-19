@@ -48,12 +48,20 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -75,6 +83,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminHome.Designer.vb">
+      <DependentUpon>AdminHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="chgPassword.Designer.vb">
       <DependentUpon>chgPassword.vb</DependentUpon>
     </Compile>
@@ -87,16 +101,34 @@
     <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InsertImage.Designer.vb">
+      <DependentUpon>InsertImage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InsertImage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModifyStaff.Designer.vb">
+      <DependentUpon>ModifyStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Movie.Designer.vb">
       <DependentUpon>Movie.vb</DependentUpon>
     </Compile>
     <Compile Include="Movie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovieImageInsertProtocol.Designer.vb">
+      <DependentUpon>MovieImageInsertProtocol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MovieImageInsertProtocol.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -115,7 +147,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PublicVar.vb" />
+    <Compile Include="Payment.Designer.vb">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="removeStaff.Designer.vb">
+      <DependentUpon>removeStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="removeStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffAssign.Designer.vb">
+      <DependentUpon>staffAssign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staffAssign.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="userProfile.Designer.vb">
       <DependentUpon>userProfile.vb</DependentUpon>
     </Compile>
@@ -129,23 +178,41 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="chgPassword.resx">
       <DependentUpon>chgPassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InsertImage.resx">
+      <DependentUpon>InsertImage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifyStaff.resx">
+      <DependentUpon>ModifyStaff.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Movie.resx">
       <DependentUpon>Movie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieImageInsertProtocol.resx">
+      <DependentUpon>MovieImageInsertProtocol.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="removeStaff.resx">
+      <DependentUpon>removeStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffAssign.resx">
+      <DependentUpon>staffAssign.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userProfile.resx">
       <DependentUpon>userProfile.vb</DependentUpon>
@@ -178,13 +245,18 @@
     <Content Include="AstronomiaDb %281%29.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="images\Avengers.jpg" />
     <Content Include="images\back.png" />
-    <Content Include="images\Dance Bound.png" />
+    <Content Include="images\DanceBound.png" />
+    <Content Include="images\GrownUps.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\movielogo.png" />
     <Content Include="images\overviewlogo.png" />
+    <Content Include="images\Parasite.jpg" />
     <Content Include="images\profilelogo.png" />
     <Content Include="images\signoutlogo.png" />
+    <Content Include="images\SpidermanFarFromHome.jpg" />
+    <Content Include="images\TheIncredibles2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
