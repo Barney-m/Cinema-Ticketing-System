@@ -17,7 +17,7 @@ Public Class chgPassword
         End Try
     End Function
 
-    Dim id As String = "S1000006"
+    Dim id As String = PubVar
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim oldpass As String
         Dim confirmPass As String

@@ -13,7 +13,7 @@ Public Class userProfile
 
     End Sub
 
-    Dim id As String = "A1000001"
+    Dim id As String = PubVar
     Private Sub userProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
