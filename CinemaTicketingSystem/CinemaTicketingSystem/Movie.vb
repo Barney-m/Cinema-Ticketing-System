@@ -67,11 +67,19 @@ Public Class Movie
             conn.Open()
             ComboBox1.Items.Clear()
             Dim cmd As New OleDbCommand
-            cmd.CommandText = "SELECT MovieID FROM Movies WHERE MovieName = ?"
+            cmd.CommandText = "SELECT * FROM Movies WHERE MovieName = ?"
             cmd.Connection = conn
             cmd.Parameters.AddWithValue("@p1", movie)
 
-            movie = cmd.ExecuteReader().ToString
+            Dim idReader As OleDbDataReader
+
+            idReader = cmd.ExecuteReader()
+            While idReader.Read
+                movie = idReader.GetString(0)
+            End While
+
+
+
             conn.Close()
             MovieSchedule()
 
@@ -82,14 +90,19 @@ Public Class Movie
 
         Dim cmd As New OleDbCommand
         conn.Open()
-        cmd.CommandText = "SELECT * FROM MovieSchedule WHERE MovieID = 'M1000001'"
+        cmd.CommandText = "SELECT * FROM MovieSchedule WHERE MovieID = ?"
         cmd.Connection = conn
         cmd.Parameters.AddWithValue("@p1", movie)
 
         dr = cmd.ExecuteReader
         While dr.Read
-            Dim schedule As String = dr.GetDateTime(1) + " " + dr.GetString(2) + " " + dr.GetString(3)
-            ComboBox1.Items.Add(schedule)
+            If String.Format("{0:M/d/yyyy}", dr.GetDateTime(1)).ToString.Equals(DateTime.Now.ToString("dd/MM/yyyy")) Then
+
+                Dim schedule As String = dr.GetDateTime(1) + " " + dr.GetString(2) + " " + dr.GetString(3)
+
+                ComboBox1.Items.Add(schedule)
+            End If
+
         End While
 
         dr.Close()
