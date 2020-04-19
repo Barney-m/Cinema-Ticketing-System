@@ -115,6 +115,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PublicVar.vb" />
     <Compile Include="userProfile.Designer.vb">
       <DependentUpon>userProfile.vb</DependentUpon>
     </Compile>
