@@ -112,4 +112,11 @@ Public Class Movie
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        ComboBox1.Items.Clear()
+        MovieDetailsPanel.Visible = False
+        MovieListView.Show()
+        btnNext1.Show()
+    End Sub
 End Class

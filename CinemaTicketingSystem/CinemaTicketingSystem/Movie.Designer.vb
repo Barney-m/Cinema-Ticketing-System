@@ -51,6 +51,7 @@ Partial Class Movie
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.MovieListView = New System.Windows.Forms.ListView()
         Me.MovieImg = New System.Windows.Forms.ImageList(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -251,11 +252,16 @@ Partial Class Movie
         '
         'btnNext1
         '
+        Me.btnNext1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnNext1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.btnNext1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNext1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext1.Location = New System.Drawing.Point(25, 7)
         Me.btnNext1.Name = "btnNext1"
         Me.btnNext1.Size = New System.Drawing.Size(75, 23)
         Me.btnNext1.TabIndex = 2
-        Me.btnNext1.Text = "Button1"
+        Me.btnNext1.Text = "Next"
         Me.btnNext1.UseVisualStyleBackColor = True
         '
         'MovieDetailsPanel
@@ -271,6 +277,7 @@ Partial Class Movie
         'MovieDetailsContainer
         '
         Me.MovieDetailsContainer.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.MovieDetailsContainer.Controls.Add(Me.Label3)
         Me.MovieDetailsContainer.Controls.Add(Me.ComboBox1)
         Me.MovieDetailsContainer.Controls.Add(Me.btnNext)
         Me.MovieDetailsContainer.Location = New System.Drawing.Point(25, 65)
@@ -318,6 +325,7 @@ Partial Class Movie
         '
         'PictureBox6
         '
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
         Me.PictureBox6.Location = New System.Drawing.Point(6, 3)
         Me.PictureBox6.Name = "PictureBox6"
@@ -343,6 +351,16 @@ Partial Class Movie
         Me.MovieImg.ImageSize = New System.Drawing.Size(16, 16)
         Me.MovieImg.TransparentColor = System.Drawing.Color.Transparent
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(441, 152)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(144, 25)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Choose a time:"
+        '
         'Movie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -365,6 +383,7 @@ Partial Class Movie
         Me.Panel3.ResumeLayout(False)
         Me.MovieDetailsPanel.ResumeLayout(False)
         Me.MovieDetailsContainer.ResumeLayout(False)
+        Me.MovieDetailsContainer.PerformLayout()
         Me.MovieDetailsBar.ResumeLayout(False)
         Me.MovieDetailsBar.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -399,4 +418,5 @@ Partial Class Movie
     Friend WithEvents movieName As Label
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents btnNext1 As Button
+    Friend WithEvents Label3 As Label
 End Class
