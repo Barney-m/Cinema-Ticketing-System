@@ -7,6 +7,9 @@ Public Class Movie
     Public ds As New DataSet
     Dim dr As OleDbDataReader
     Dim movie As String
+    Dim movieHall As String
+    Dim movieDate As String
+    Dim movieTime As String
 
     Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
 
@@ -64,6 +67,7 @@ Public Class Movie
             btnNext1.Hide()
             MovieDetailsPanel.Visible = True
             movie = MovieListView.Items(MovieListView.FocusedItem.Index).SubItems(0).Text
+            movieName.Text = movie
             conn.Open()
             ComboBox1.Items.Clear()
             Dim cmd As New OleDbCommand
@@ -95,12 +99,15 @@ Public Class Movie
         cmd.Parameters.AddWithValue("@p1", movie)
 
         dr = cmd.ExecuteReader
-        While dr.Read
-            If String.Format("{0:M/d/yyyy}", dr.GetDateTime(1)).ToString.Equals(DateTime.Now.ToString("dd/MM/yyyy")) Then
+        'DateTime.Now.ToString("dd/MM/yyyy")
 
-                Dim schedule As String = dr.GetDateTime(1) + " " + dr.GetString(2) + " " + dr.GetString(3)
+        While dr.Read
+            If String.Format("{0:MM/dd/yyyy}", dr.GetDateTime(1)).ToString.Equals("04/09/2020") Then
+
+                Dim schedule As String = String.Format("{0:MM/dd/yyyy}", dr.GetDateTime(1)) + " " + dr.GetString(2) + " " + dr.GetString(3)
 
                 ComboBox1.Items.Add(schedule)
+
             End If
 
         End While
@@ -109,14 +116,21 @@ Public Class Movie
         conn.Close()
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
-    End Sub
-
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
         ComboBox1.Items.Clear()
         MovieDetailsPanel.Visible = False
         MovieListView.Show()
         btnNext1.Show()
+    End Sub
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        If ComboBox1.SelectedItem Is Nothing Then
+            MsgBox("Choose a schedule!")
+        Else
+            movieHall = ComboBox1.SelectedItem.ToString.Substring(ComboBox1.SelectedItem.ToString.Length - 2)
+            movieDate = ComboBox1.SelectedItem.ToString.Substring(0, 10)
+            movieTime = ComboBox1.SelectedItem.ToString.Substring(11, 4)
+        End If
+        Panel4.Visible = True
     End Sub
 End Class
