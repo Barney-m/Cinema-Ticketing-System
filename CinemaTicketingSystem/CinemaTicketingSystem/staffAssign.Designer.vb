@@ -126,12 +126,11 @@ Partial Class staffAssign
         '
         'txtEmail
         '
-        Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.Location = New System.Drawing.Point(137, 196)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtEmail.Multiline = True
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(253, 25)
+        Me.txtEmail.Size = New System.Drawing.Size(253, 26)
         Me.txtEmail.TabIndex = 19
         '
         'CbStatus
@@ -146,38 +145,34 @@ Partial Class staffAssign
         '
         'txtPassword
         '
-        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.Location = New System.Drawing.Point(137, 281)
-        Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(253, 25)
+        Me.txtPassword.Size = New System.Drawing.Size(253, 26)
         Me.txtPassword.TabIndex = 16
         '
         'txtAddress
         '
-        Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAddress.Location = New System.Drawing.Point(137, 159)
-        Me.txtAddress.Multiline = True
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(253, 25)
+        Me.txtAddress.Size = New System.Drawing.Size(253, 26)
         Me.txtAddress.TabIndex = 11
         '
         'txtPhone
         '
-        Me.txtPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPhone.Location = New System.Drawing.Point(137, 119)
-        Me.txtPhone.Multiline = True
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(253, 25)
+        Me.txtPhone.Size = New System.Drawing.Size(253, 26)
         Me.txtPhone.TabIndex = 10
         '
         'txtName
         '
-        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtName.Location = New System.Drawing.Point(137, 36)
-        Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(253, 25)
+        Me.txtName.Size = New System.Drawing.Size(253, 26)
         Me.txtName.TabIndex = 8
         '
         'Label7
