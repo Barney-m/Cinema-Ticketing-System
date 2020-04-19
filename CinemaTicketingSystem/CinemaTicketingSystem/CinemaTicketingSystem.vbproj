@@ -153,7 +153,6 @@
     <Compile Include="Payment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PublicVar.vb" />
     <Compile Include="removeStaff.Designer.vb">
       <DependentUpon>removeStaff.vb</DependentUpon>
     </Compile>
