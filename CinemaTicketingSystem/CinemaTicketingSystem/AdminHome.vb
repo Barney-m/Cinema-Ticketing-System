@@ -70,4 +70,12 @@
     Private Sub btnAddStaff_Click(sender As Object, e As EventArgs) Handles btnAddStaff.Click
         staffAssign.Show(Me)
     End Sub
+
+    Private Sub btnModifyStaff_Click(sender As Object, e As EventArgs) Handles btnModifyStaff.Click
+        ModifyStaff.Show(Me)
+    End Sub
+
+    Private Sub btnRemoveStaff_Click(sender As Object, e As EventArgs) Handles btnRemoveStaff.Click
+        removeStaff.Show(Me)
+    End Sub
 End Class

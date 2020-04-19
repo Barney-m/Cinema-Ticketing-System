@@ -2,7 +2,7 @@
 
 Public Class Movie
 
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= C:\Users\khai xiang\Source\Repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\college material\vb assignment\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
     Public acsconn As New OleDbConnection 'listview
     Public ds As New DataSet
     Dim dr As OleDbDataReader
@@ -41,7 +41,7 @@ Public Class Movie
             Dim i As Integer = 0
             For Each row As DataRow In ds.Tables(0).Rows
                 MovieListView.Items.Add(row.ItemArray(1).ToString, i)
-                MovieImg.Images.Add(Image.FromFile("C:\Users\khai xiang\Source\Repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\images\Parasite.jpg"))
+                MovieImg.Images.Add(Image.FromFile("D:\college material\vb assignment\CinemaTicketingSystem\CinemaTicketingSystem\images\Parasite.jpg"))
                 i += 1
             Next
 
@@ -112,4 +112,6 @@ Public Class Movie
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
+
+
 End Class

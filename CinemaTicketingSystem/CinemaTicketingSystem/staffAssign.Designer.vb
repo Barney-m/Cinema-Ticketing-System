@@ -23,9 +23,9 @@ Partial Class staffAssign
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(staffAssign))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnSignOut = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DTdob = New System.Windows.Forms.DateTimePicker()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -48,20 +48,21 @@ Partial Class staffAssign
         Me.EmployeesTableAdapter = New CinemaTicketingSystem._AstronomiaDb__1_DataSetTableAdapters.EmployeesTableAdapter()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.EmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Silver
-        Me.Panel1.Controls.Add(Me.btnSignOut)
         Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.btnSignOut)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -83,15 +84,6 @@ Partial Class staffAssign
         Me.btnSignOut.TabIndex = 1
         Me.btnSignOut.Text = "Sign Out"
         Me.btnSignOut.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(122, 82)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Panel2
         '
@@ -271,7 +263,7 @@ Partial Class staffAssign
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv.Location = New System.Drawing.Point(0, 0)
         Me.dgv.Name = "dgv"
-        Me.dgv.Size = New System.Drawing.Size(730, 349)
+        Me.dgv.Size = New System.Drawing.Size(730, 346)
         Me.dgv.TabIndex = 0
         '
         'EmployeesTableAdapter
@@ -296,6 +288,16 @@ Partial Class staffAssign
         Me.btnCancel.Text = "Close"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(122, 82)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
         'staffAssign
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -309,20 +311,19 @@ Partial Class staffAssign
         Me.Name = "staffAssign"
         Me.Text = "staffAssign"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.EmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnSignOut As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents CbStatus As ComboBox
     Friend WithEvents txtPassword As TextBox
@@ -345,4 +346,5 @@ Partial Class staffAssign
     Friend WithEvents btnCancel As Button
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents DTdob As DateTimePicker
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
