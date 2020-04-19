@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{08EEA9F6-5A20-4993-AB25-90447642D273}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>CinemaTicketingSystem.My.MyApplication</StartupObject>
+    <StartupObject>CinemaTicketingSystem.Login</StartupObject>
     <RootNamespace>CinemaTicketingSystem</RootNamespace>
     <AssemblyName>CinemaTicketingSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>

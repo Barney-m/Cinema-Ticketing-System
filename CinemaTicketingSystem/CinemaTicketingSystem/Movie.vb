@@ -2,11 +2,14 @@
 
 Public Class Movie
 
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\college material\vb assignment\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\khai xiang\source\repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
     Public acsconn As New OleDbConnection 'listview
     Public ds As New DataSet
     Dim dr As OleDbDataReader
     Dim movie As String
+    Dim movieDate As String
+    Dim movieTime As String
+    Dim movieHall As String
 
     Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
 
@@ -41,7 +44,7 @@ Public Class Movie
             Dim i As Integer = 0
             For Each row As DataRow In ds.Tables(0).Rows
                 MovieListView.Items.Add(row.ItemArray(1).ToString, i)
-                MovieImg.Images.Add(Image.FromFile("D:\college material\vb assignment\CinemaTicketingSystem\CinemaTicketingSystem\images\Parasite.jpg"))
+                MovieImg.Images.Add(Image.FromFile("C:\Users\khai xiang\source\repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\images\Avengers.jpg"))
                 i += 1
             Next
 
@@ -60,10 +63,13 @@ Public Class Movie
         If MovieListView.SelectedItems Is Nothing Then
             MsgBox("Please Select A Movie.")
         Else
+
             MovieListView.Hide()
             btnNext1.Hide()
             MovieDetailsPanel.Visible = True
             movie = MovieListView.Items(MovieListView.FocusedItem.Index).SubItems(0).Text
+            movieName.Text = movie
+            Label5.Text = movie
             conn.Open()
             ComboBox1.Items.Clear()
             Dim cmd As New OleDbCommand
@@ -87,7 +93,7 @@ Public Class Movie
     End Sub
 
     Sub MovieSchedule()
-
+        ComboBox1.Text = ""
         Dim cmd As New OleDbCommand
         conn.Open()
         cmd.CommandText = "SELECT * FROM MovieSchedule WHERE MovieID = ?"
@@ -95,10 +101,12 @@ Public Class Movie
         cmd.Parameters.AddWithValue("@p1", movie)
 
         dr = cmd.ExecuteReader
-        While dr.Read
-            If String.Format("{0:M/d/yyyy}", dr.GetDateTime(1)).ToString.Equals(DateTime.Now.ToString("dd/MM/yyyy")) Then
 
-                Dim schedule As String = dr.GetDateTime(1) + " " + dr.GetString(2) + " " + dr.GetString(3)
+        'String.Format("{0:MM/dd/yyyy}", DateTime.Now.ToString("dd/MM/yyyy"))
+        While dr.Read
+            If String.Format("{0:MM/dd/yyyy}", dr.GetDateTime(1)).ToString.Equals("04/09/2020") Then
+
+                Dim schedule As String = String.Format("{0:MM/dd/yyyy}", dr.GetDateTime(1)) + " " + dr.GetString(2) + " " + dr.GetString(3)
 
                 ComboBox1.Items.Add(schedule)
             End If
@@ -109,9 +117,26 @@ Public Class Movie
         conn.Close()
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        If ComboBox1.SelectedIndex > -1 Then
+            movieHall = ComboBox1.SelectedItem.ToString().Substring(ComboBox1.SelectedItem.ToString().Length - 5)
+            movieDate = ComboBox1.SelectedItem.ToString().Substring(0, 8)
+            movieTime = ComboBox1.SelectedItem.ToString().Substring(9, 4)
+            Panel4.Visible = True
+        Else
+            MsgBox("Select an option")
+        End If
 
     End Sub
 
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        MovieListView.Show()
+        MovieDetailsPanel.Visible = False
+        btnNext1.Visible = True
+    End Sub
 
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        MovieDetailsPanel.Visible = True
+        Panel4.Visible = False
+    End Sub
 End Class
