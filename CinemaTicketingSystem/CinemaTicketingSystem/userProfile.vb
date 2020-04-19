@@ -2,7 +2,7 @@
 
 Public Class userProfile
 
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PC\Source\Repos\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb;")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\college material\vb assignment\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
     Dim cmd As OleDbCommand
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click

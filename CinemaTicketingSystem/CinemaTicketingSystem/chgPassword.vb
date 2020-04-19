@@ -17,7 +17,7 @@ Public Class chgPassword
         End Try
     End Function
 
-    Dim id As String = "S1000006"
+    Dim id As String = PubVar
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Dim oldpass As String
         Dim confirmPass As String
@@ -42,7 +42,9 @@ Public Class chgPassword
 
                 MessageBox.Show("Password Successfully Changed !", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                userProfile.Show(Me)
+                txtConfirmPassword.Text = ""
+                txtNewPassword.Text = ""
+                txtOldPassword.Text = ""
             Else
                 MessageBox.Show("New password does not match !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
