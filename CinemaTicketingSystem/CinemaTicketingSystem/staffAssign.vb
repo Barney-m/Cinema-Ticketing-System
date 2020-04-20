@@ -24,7 +24,7 @@ Public Class staffAssign
         conn.Open()
         Dim da As New OleDbDataAdapter
         Dim ds As New DataSet
-        Dim str1 As String = "select Full_Name, Birth_Date, Phone_No, Address, [E-mail], Status, [Password] from Employees where jobID = 1"
+        Dim str1 As String = "select EmployeeID,Full_Name, Birth_Date, Phone_No, Address, [E-mail], Status, [Password] from Employees where jobID = 1"
         da.SelectCommand = New OleDbCommand(str1, conn)
         da.Fill(ds)
         conn.Close()
