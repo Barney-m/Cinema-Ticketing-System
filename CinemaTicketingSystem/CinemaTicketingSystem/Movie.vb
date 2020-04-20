@@ -212,9 +212,20 @@ Public Class Movie
         For Each control In Me.Controls
             If TypeOf (control) Is PictureBox Then
                 CType(control, PictureBox).Image = My.Resources.seatdefault
+                AddHandler control.Click, AddressOf H1A6_Click
             End If
         Next
 
+        For Each x In scheduleID
 
+        Next
+    End Sub
+
+    Private Sub H1A6_Click(sender As Object, e As EventArgs) Handles H1A6.Click
+        If CType(sender, PictureBox).Image Is My.Resources.seatunavailable Then
+            CType(sender, PictureBox).Image = My.Resources.seatavailable
+        ElseIf CType(sender, PictureBox).Image Is My.Resources.seatavailable Then
+            CType(sender, PictureBox).Image = My.Resources.seatunavailable
+        End If
     End Sub
 End Class
