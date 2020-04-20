@@ -43,8 +43,29 @@ Partial Class Movie
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnNext1 = New System.Windows.Forms.Button()
         Me.MovieDetailsPanel = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.panelSmall = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.H1B5 = New System.Windows.Forms.PictureBox()
+        Me.H1B6 = New System.Windows.Forms.PictureBox()
+        Me.H1B4 = New System.Windows.Forms.PictureBox()
+        Me.H1B3 = New System.Windows.Forms.PictureBox()
+        Me.H1B2 = New System.Windows.Forms.PictureBox()
+        Me.H1B1 = New System.Windows.Forms.PictureBox()
+        Me.H1A6 = New System.Windows.Forms.PictureBox()
+        Me.H1A5 = New System.Windows.Forms.PictureBox()
+        Me.H1A4 = New System.Windows.Forms.PictureBox()
+        Me.H1A3 = New System.Windows.Forms.PictureBox()
+        Me.H1A2 = New System.Windows.Forms.PictureBox()
+        Me.H1A1 = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
@@ -57,6 +78,8 @@ Partial Class Movie
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.MovieListView = New System.Windows.Forms.ListView()
         Me.MovieImg = New System.Windows.Forms.ImageList(Me.components)
+        Me._AstronomiaDb__1_DataSet = New CinemaTicketingSystem._AstronomiaDb__1_DataSet()
+        Me.AstronomiaDb1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,12 +89,27 @@ Partial Class Movie
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.MovieDetailsPanel.SuspendLayout()
-        Me.Panel4.SuspendLayout()
+        Me.panelSmall.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.H1B5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1B6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1B4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1B3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1B2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1B1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1A6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1A5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1A4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1A3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1A2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.H1A1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MovieDetailsContainer.SuspendLayout()
         Me.MovieDetailsBar.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AstronomiaDb1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox5
@@ -273,7 +311,7 @@ Partial Class Movie
         '
         'MovieDetailsPanel
         '
-        Me.MovieDetailsPanel.Controls.Add(Me.Panel4)
+        Me.MovieDetailsPanel.Controls.Add(Me.panelSmall)
         Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsContainer)
         Me.MovieDetailsPanel.Controls.Add(Me.MovieDetailsBar)
         Me.MovieDetailsPanel.Location = New System.Drawing.Point(0, 0)
@@ -282,23 +320,220 @@ Partial Class Movie
         Me.MovieDetailsPanel.TabIndex = 1
         Me.MovieDetailsPanel.Visible = False
         '
-        'Panel4
+        'panelSmall
         '
-        Me.Panel4.Controls.Add(Me.Panel5)
-        Me.Panel4.Controls.Add(Me.Panel6)
-        Me.Panel4.Location = New System.Drawing.Point(0, -1)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1051, 581)
-        Me.Panel4.TabIndex = 2
-        Me.Panel4.Visible = False
+        Me.panelSmall.Controls.Add(Me.Panel5)
+        Me.panelSmall.Controls.Add(Me.Panel6)
+        Me.panelSmall.Location = New System.Drawing.Point(0, -1)
+        Me.panelSmall.Name = "panelSmall"
+        Me.panelSmall.Size = New System.Drawing.Size(1051, 581)
+        Me.panelSmall.TabIndex = 2
+        Me.panelSmall.Visible = False
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Controls.Add(Me.Label12)
+        Me.Panel5.Controls.Add(Me.Label11)
+        Me.Panel5.Controls.Add(Me.Label10)
+        Me.Panel5.Controls.Add(Me.Label9)
+        Me.Panel5.Controls.Add(Me.Label8)
+        Me.Panel5.Controls.Add(Me.Label7)
+        Me.Panel5.Controls.Add(Me.Label6)
+        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Controls.Add(Me.Panel7)
+        Me.Panel5.Controls.Add(Me.H1B5)
+        Me.Panel5.Controls.Add(Me.H1B6)
+        Me.Panel5.Controls.Add(Me.H1B4)
+        Me.Panel5.Controls.Add(Me.H1B3)
+        Me.Panel5.Controls.Add(Me.H1B2)
+        Me.Panel5.Controls.Add(Me.H1B1)
+        Me.Panel5.Controls.Add(Me.H1A6)
+        Me.Panel5.Controls.Add(Me.H1A5)
+        Me.Panel5.Controls.Add(Me.H1A4)
+        Me.Panel5.Controls.Add(Me.H1A3)
+        Me.Panel5.Controls.Add(Me.H1A2)
+        Me.Panel5.Controls.Add(Me.H1A1)
         Me.Panel5.Location = New System.Drawing.Point(25, 65)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1001, 483)
         Me.Panel5.TabIndex = 1
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(229, 255)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(14, 13)
+        Me.Label12.TabIndex = 20
+        Me.Label12.Text = "A"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(229, 176)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(14, 13)
+        Me.Label11.TabIndex = 19
+        Me.Label11.Text = "B"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(636, 120)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(13, 13)
+        Me.Label10.TabIndex = 18
+        Me.Label10.Text = "6"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(562, 120)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(13, 13)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "5"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(495, 120)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(13, 13)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "4"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(424, 120)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(13, 13)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "3"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(358, 120)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(13, 13)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "2"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(289, 120)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(13, 13)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "1"
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.DimGray
+        Me.Panel7.Location = New System.Drawing.Point(344, 365)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(241, 64)
+        Me.Panel7.TabIndex = 12
+        '
+        'H1B5
+        '
+        Me.H1B5.Location = New System.Drawing.Point(553, 167)
+        Me.H1B5.Name = "H1B5"
+        Me.H1B5.Size = New System.Drawing.Size(41, 39)
+        Me.H1B5.TabIndex = 11
+        Me.H1B5.TabStop = False
+        '
+        'H1B6
+        '
+        Me.H1B6.Location = New System.Drawing.Point(622, 167)
+        Me.H1B6.Name = "H1B6"
+        Me.H1B6.Size = New System.Drawing.Size(41, 39)
+        Me.H1B6.TabIndex = 10
+        Me.H1B6.TabStop = False
+        '
+        'H1B4
+        '
+        Me.H1B4.Location = New System.Drawing.Point(481, 167)
+        Me.H1B4.Name = "H1B4"
+        Me.H1B4.Size = New System.Drawing.Size(41, 39)
+        Me.H1B4.TabIndex = 9
+        Me.H1B4.TabStop = False
+        '
+        'H1B3
+        '
+        Me.H1B3.Location = New System.Drawing.Point(413, 167)
+        Me.H1B3.Name = "H1B3"
+        Me.H1B3.Size = New System.Drawing.Size(41, 39)
+        Me.H1B3.TabIndex = 8
+        Me.H1B3.TabStop = False
+        '
+        'H1B2
+        '
+        Me.H1B2.Location = New System.Drawing.Point(344, 167)
+        Me.H1B2.Name = "H1B2"
+        Me.H1B2.Size = New System.Drawing.Size(41, 39)
+        Me.H1B2.TabIndex = 7
+        Me.H1B2.TabStop = False
+        '
+        'H1B1
+        '
+        Me.H1B1.Location = New System.Drawing.Point(274, 167)
+        Me.H1B1.Name = "H1B1"
+        Me.H1B1.Size = New System.Drawing.Size(41, 39)
+        Me.H1B1.TabIndex = 6
+        Me.H1B1.TabStop = False
+        '
+        'H1A6
+        '
+        Me.H1A6.Location = New System.Drawing.Point(622, 244)
+        Me.H1A6.Name = "H1A6"
+        Me.H1A6.Size = New System.Drawing.Size(41, 39)
+        Me.H1A6.TabIndex = 5
+        Me.H1A6.TabStop = False
+        '
+        'H1A5
+        '
+        Me.H1A5.Location = New System.Drawing.Point(553, 244)
+        Me.H1A5.Name = "H1A5"
+        Me.H1A5.Size = New System.Drawing.Size(41, 39)
+        Me.H1A5.TabIndex = 4
+        Me.H1A5.TabStop = False
+        '
+        'H1A4
+        '
+        Me.H1A4.Location = New System.Drawing.Point(481, 244)
+        Me.H1A4.Name = "H1A4"
+        Me.H1A4.Size = New System.Drawing.Size(41, 39)
+        Me.H1A4.TabIndex = 3
+        Me.H1A4.TabStop = False
+        '
+        'H1A3
+        '
+        Me.H1A3.Location = New System.Drawing.Point(413, 244)
+        Me.H1A3.Name = "H1A3"
+        Me.H1A3.Size = New System.Drawing.Size(41, 39)
+        Me.H1A3.TabIndex = 2
+        Me.H1A3.TabStop = False
+        '
+        'H1A2
+        '
+        Me.H1A2.Location = New System.Drawing.Point(344, 244)
+        Me.H1A2.Name = "H1A2"
+        Me.H1A2.Size = New System.Drawing.Size(41, 39)
+        Me.H1A2.TabIndex = 1
+        Me.H1A2.TabStop = False
+        '
+        'H1A1
+        '
+        Me.H1A1.Location = New System.Drawing.Point(274, 244)
+        Me.H1A1.Name = "H1A1"
+        Me.H1A1.Size = New System.Drawing.Size(41, 39)
+        Me.H1A1.TabIndex = 0
+        Me.H1A1.TabStop = False
         '
         'Panel6
         '
@@ -417,6 +652,16 @@ Partial Class Movie
         Me.MovieImg.ImageSize = New System.Drawing.Size(16, 16)
         Me.MovieImg.TransparentColor = System.Drawing.Color.Transparent
         '
+        '_AstronomiaDb__1_DataSet
+        '
+        Me._AstronomiaDb__1_DataSet.DataSetName = "_AstronomiaDb__1_DataSet"
+        Me._AstronomiaDb__1_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AstronomiaDb1DataSetBindingSource
+        '
+        Me.AstronomiaDb1DataSetBindingSource.DataSource = Me._AstronomiaDb__1_DataSet
+        Me.AstronomiaDb1DataSetBindingSource.Position = 0
+        '
         'Movie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -438,7 +683,21 @@ Partial Class Movie
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.MovieDetailsPanel.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
+        Me.panelSmall.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.H1B5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1B6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1B4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1B3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1B2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1B1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1A6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1A5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1A4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1A3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1A2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.H1A1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -446,6 +705,8 @@ Partial Class Movie
         Me.MovieDetailsBar.ResumeLayout(False)
         Me.MovieDetailsBar.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AstronomiaDb1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -478,9 +739,32 @@ Partial Class Movie
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents btnNext1 As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents panelSmall As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents H1B5 As PictureBox
+    Friend WithEvents H1B6 As PictureBox
+    Friend WithEvents H1B4 As PictureBox
+    Friend WithEvents H1B3 As PictureBox
+    Friend WithEvents H1B2 As PictureBox
+    Friend WithEvents H1B1 As PictureBox
+    Friend WithEvents H1A6 As PictureBox
+    Friend WithEvents H1A5 As PictureBox
+    Friend WithEvents H1A4 As PictureBox
+    Friend WithEvents H1A3 As PictureBox
+    Friend WithEvents H1A2 As PictureBox
+    Friend WithEvents H1A1 As PictureBox
+    Friend WithEvents _AstronomiaDb__1_DataSet As _AstronomiaDb__1_DataSet
+    Friend WithEvents AstronomiaDb1DataSetBindingSource As BindingSource
 End Class

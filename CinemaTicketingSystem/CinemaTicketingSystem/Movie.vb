@@ -10,6 +10,8 @@ Public Class Movie
     Dim movieDate As String
     Dim movieTime As String
     Dim movieHall As String
+    Dim scheduleID As String
+    Dim seatID As ArrayList
 
     Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
 
@@ -19,7 +21,6 @@ Public Class Movie
         MovieListView.View = View.LargeIcon
         MovieListView.SelectedItems.Clear()
         MovieListView.SelectedIndices.Clear()
-
         MovieListView.MultiSelect = False
 
         ListView()
@@ -117,12 +118,77 @@ Public Class Movie
         conn.Close()
     End Sub
 
+    Sub getScheduleID()
+        Dim cmd As New OleDbCommand
+        conn.Open()
+        cmd.CommandText = "SELECT * FROM MovieSchedule WHERE MovieDate = ?, MovieTime = ?, HallID = ?"
+        cmd.Connection = conn
+        cmd.Parameters.AddWithValue("@p1", movieDate)
+        cmd.Parameters.AddWithValue("@p2", movieTime)
+        cmd.Parameters.AddWithValue("@p3", movieHall)
+
+        dr = cmd.ExecuteReader
+
+        While dr.Read
+            scheduleID = dr.GetString(0)
+        End While
+        conn.Close()
+        dr.Close()
+
+    End Sub
+
+    Sub getTicketID()
+        Dim cmd As New OleDbCommand
+        conn.Open()
+        cmd.CommandText = "SELECT * FROM TicketPurchasement WHERE ScheduleID = ?"
+        cmd.Connection = conn
+        cmd.Parameters.AddWithValue("@p1", scheduleID)
+
+        dr = cmd.ExecuteReader
+        Dim ticketID(dr.FieldCount) As String
+        Dim i As Integer = 0
+        While dr.Read
+            ticketID(i) = dr.GetString(0)
+            i += 1
+        End While
+        i = 0
+        conn.Close()
+        dr.Close()
+
+        getTicketDetails(ticketID)
+
+    End Sub
+
+    Sub getTicketDetails(ByVal ParamArray ticketID() As String)
+        conn.Open()
+        For x = 0 To ticketID.Length Step 1
+
+
+            Dim cmd As New OleDbCommand
+            cmd.CommandText = "SELECT * FROM TicketDetails WHERE TicketID = ?"
+            cmd.Connection = conn
+            cmd.Parameters.AddWithValue("@p1", ticketID(x))
+
+            dr = cmd.ExecuteReader
+            While dr.Read
+                seatID.Add(dr.GetString(1))
+            End While
+        Next
+        conn.Close()
+        dr.Close()
+    End Sub
+
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         If ComboBox1.SelectedIndex > -1 Then
             movieHall = ComboBox1.SelectedItem.ToString().Substring(ComboBox1.SelectedItem.ToString().Length - 5)
             movieDate = ComboBox1.SelectedItem.ToString().Substring(0, 8)
             movieTime = ComboBox1.SelectedItem.ToString().Substring(9, 4)
-            Panel4.Visible = True
+
+            getScheduleID()
+            getTicketID()
+
+            'Small Hall
+            panelSmall.Visible = True
         Else
             MsgBox("Select an option")
         End If
@@ -137,6 +203,18 @@ Public Class Movie
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         MovieDetailsPanel.Visible = True
-        Panel4.Visible = False
+        panelSmall.Visible = False
+    End Sub
+
+    Private Sub panelSmall_VisibleChanged(sender As Object, e As PaintEventArgs) Handles panelSmall.VisibleChanged
+        Dim control As Control
+
+        For Each control In Me.Controls
+            If TypeOf (control) Is PictureBox Then
+                CType(control, PictureBox).Image = My.Resources.seatdefault
+            End If
+        Next
+
+
     End Sub
 End Class

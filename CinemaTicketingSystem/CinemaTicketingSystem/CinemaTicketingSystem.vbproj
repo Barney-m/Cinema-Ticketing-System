@@ -255,6 +255,9 @@
     <Content Include="images\overviewlogo.png" />
     <Content Include="images\Parasite.jpg" />
     <Content Include="images\profilelogo.png" />
+    <Content Include="images\seatavailable.png" />
+    <Content Include="images\seatdefault.png" />
+    <Content Include="images\seatunavailable.png" />
     <Content Include="images\signoutlogo.png" />
     <Content Include="images\SpidermanFarFromHome.jpg" />
     <Content Include="images\TheIncredibles2.jpg" />
