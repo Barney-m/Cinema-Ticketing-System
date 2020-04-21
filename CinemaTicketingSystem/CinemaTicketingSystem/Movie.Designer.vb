@@ -46,6 +46,20 @@ Partial Class Movie
         Me.panelHall = New System.Windows.Forms.Panel()
         Me.panelOrder = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.btnOrder = New System.Windows.Forms.Button()
+        Me.lblSeat = New System.Windows.Forms.Label()
+        Me.lblPrice = New System.Windows.Forms.Label()
+        Me.lblPax = New System.Windows.Forms.Label()
+        Me.lblMovieName = New System.Windows.Forms.Label()
+        Me.lblTicketID = New System.Windows.Forms.Label()
+        Me.lblHall = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.backLogo3 = New System.Windows.Forms.PictureBox()
@@ -107,18 +121,6 @@ Partial Class Movie
         Me.MovieImg = New System.Windows.Forms.ImageList(Me.components)
         Me._AstronomiaDb__1_DataSet = New CinemaTicketingSystem._AstronomiaDb__1_DataSet()
         Me.AstronomiaDb1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.lblHall = New System.Windows.Forms.Label()
-        Me.lblTicketID = New System.Windows.Forms.Label()
-        Me.lblMovieName = New System.Windows.Forms.Label()
-        Me.lblPax = New System.Windows.Forms.Label()
-        Me.lblPrice = New System.Windows.Forms.Label()
         CType(Me.overviewLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.movieLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.profileLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -405,6 +407,8 @@ Partial Class Movie
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel8.Controls.Add(Me.btnOrder)
+        Me.Panel8.Controls.Add(Me.lblSeat)
         Me.Panel8.Controls.Add(Me.lblPrice)
         Me.Panel8.Controls.Add(Me.lblPax)
         Me.Panel8.Controls.Add(Me.lblMovieName)
@@ -421,6 +425,150 @@ Partial Class Movie
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(1001, 483)
         Me.Panel8.TabIndex = 1
+        '
+        'btnOrder
+        '
+        Me.btnOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOrder.Location = New System.Drawing.Point(442, 355)
+        Me.btnOrder.Name = "btnOrder"
+        Me.btnOrder.Size = New System.Drawing.Size(131, 55)
+        Me.btnOrder.TabIndex = 13
+        Me.btnOrder.Text = "Confirm"
+        Me.btnOrder.UseVisualStyleBackColor = True
+        '
+        'lblSeat
+        '
+        Me.lblSeat.AutoSize = True
+        Me.lblSeat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSeat.Location = New System.Drawing.Point(704, 244)
+        Me.lblSeat.Name = "lblSeat"
+        Me.lblSeat.Size = New System.Drawing.Size(73, 20)
+        Me.lblSeat.TabIndex = 12
+        Me.lblSeat.Text = "Label23"
+        '
+        'lblPrice
+        '
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.ForeColor = System.Drawing.Color.Green
+        Me.lblPrice.Location = New System.Drawing.Point(482, 233)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(66, 20)
+        Me.lblPrice.TabIndex = 11
+        Me.lblPrice.Text = "Label24"
+        '
+        'lblPax
+        '
+        Me.lblPax.AutoSize = True
+        Me.lblPax.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPax.ForeColor = System.Drawing.Color.Green
+        Me.lblPax.Location = New System.Drawing.Point(482, 193)
+        Me.lblPax.Name = "lblPax"
+        Me.lblPax.Size = New System.Drawing.Size(66, 20)
+        Me.lblPax.TabIndex = 10
+        Me.lblPax.Text = "Label24"
+        '
+        'lblMovieName
+        '
+        Me.lblMovieName.AutoSize = True
+        Me.lblMovieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMovieName.ForeColor = System.Drawing.Color.Green
+        Me.lblMovieName.Location = New System.Drawing.Point(481, 154)
+        Me.lblMovieName.Name = "lblMovieName"
+        Me.lblMovieName.Size = New System.Drawing.Size(66, 20)
+        Me.lblMovieName.TabIndex = 9
+        Me.lblMovieName.Text = "Label24"
+        '
+        'lblTicketID
+        '
+        Me.lblTicketID.AutoSize = True
+        Me.lblTicketID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTicketID.ForeColor = System.Drawing.Color.Green
+        Me.lblTicketID.Location = New System.Drawing.Point(481, 117)
+        Me.lblTicketID.Name = "lblTicketID"
+        Me.lblTicketID.Size = New System.Drawing.Size(66, 20)
+        Me.lblTicketID.TabIndex = 8
+        Me.lblTicketID.Text = "Label24"
+        '
+        'lblHall
+        '
+        Me.lblHall.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHall.Location = New System.Drawing.Point(702, 104)
+        Me.lblHall.Name = "lblHall"
+        Me.lblHall.Size = New System.Drawing.Size(61, 59)
+        Me.lblHall.TabIndex = 7
+        Me.lblHall.Text = "1"
+        Me.lblHall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label22
+        '
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(698, 211)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(75, 28)
+        Me.Label22.TabIndex = 6
+        Me.Label22.Text = "Seat No:"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label21
+        '
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(698, 76)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(75, 28)
+        Me.Label21.TabIndex = 5
+        Me.Label21.Text = "Hall"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label20
+        '
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(352, 229)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(124, 28)
+        Me.Label20.TabIndex = 4
+        Me.Label20.Text = "Price                   :"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label19
+        '
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(353, 189)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(123, 28)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "Pax                     :"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label18
+        '
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(348, 150)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(132, 28)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = "Movie Name      :"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label17
+        '
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(352, 113)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(123, 28)
+        Me.Label17.TabIndex = 1
+        Me.Label17.Text = "Ticket ID             :"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(412, 43)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(187, 31)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = "Order Details"
         '
         'Panel10
         '
@@ -1052,130 +1200,6 @@ Partial Class Movie
         Me.AstronomiaDb1DataSetBindingSource.DataSource = Me._AstronomiaDb__1_DataSet
         Me.AstronomiaDb1DataSetBindingSource.Position = 0
         '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(413, 34)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(168, 25)
-        Me.Label16.TabIndex = 0
-        Me.Label16.Text = "Payment Details"
-        '
-        'Label17
-        '
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(300, 88)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(123, 28)
-        Me.Label17.TabIndex = 1
-        Me.Label17.Text = "Ticket ID             :"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label18
-        '
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(296, 125)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(132, 28)
-        Me.Label18.TabIndex = 2
-        Me.Label18.Text = "Movie Name      :"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label19
-        '
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(301, 164)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(123, 28)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "Pax                     :"
-        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label20
-        '
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(300, 204)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(124, 28)
-        Me.Label20.TabIndex = 4
-        Me.Label20.Text = "Price                   :"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label21
-        '
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(698, 76)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(75, 28)
-        Me.Label21.TabIndex = 5
-        Me.Label21.Text = "Hall"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label22
-        '
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(698, 211)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(75, 28)
-        Me.Label22.TabIndex = 6
-        Me.Label22.Text = "Seat No:"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblHall
-        '
-        Me.lblHall.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHall.Location = New System.Drawing.Point(702, 104)
-        Me.lblHall.Name = "lblHall"
-        Me.lblHall.Size = New System.Drawing.Size(61, 59)
-        Me.lblHall.TabIndex = 7
-        Me.lblHall.Text = "1"
-        Me.lblHall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblTicketID
-        '
-        Me.lblTicketID.AutoSize = True
-        Me.lblTicketID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTicketID.ForeColor = System.Drawing.Color.Green
-        Me.lblTicketID.Location = New System.Drawing.Point(429, 92)
-        Me.lblTicketID.Name = "lblTicketID"
-        Me.lblTicketID.Size = New System.Drawing.Size(66, 20)
-        Me.lblTicketID.TabIndex = 8
-        Me.lblTicketID.Text = "Label24"
-        '
-        'lblMovieName
-        '
-        Me.lblMovieName.AutoSize = True
-        Me.lblMovieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMovieName.ForeColor = System.Drawing.Color.Green
-        Me.lblMovieName.Location = New System.Drawing.Point(429, 129)
-        Me.lblMovieName.Name = "lblMovieName"
-        Me.lblMovieName.Size = New System.Drawing.Size(66, 20)
-        Me.lblMovieName.TabIndex = 9
-        Me.lblMovieName.Text = "Label24"
-        '
-        'lblPax
-        '
-        Me.lblPax.AutoSize = True
-        Me.lblPax.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPax.ForeColor = System.Drawing.Color.Green
-        Me.lblPax.Location = New System.Drawing.Point(430, 168)
-        Me.lblPax.Name = "lblPax"
-        Me.lblPax.Size = New System.Drawing.Size(66, 20)
-        Me.lblPax.TabIndex = 10
-        Me.lblPax.Text = "Label24"
-        '
-        'lblPrice
-        '
-        Me.lblPrice.AutoSize = True
-        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrice.ForeColor = System.Drawing.Color.Green
-        Me.lblPrice.Location = New System.Drawing.Point(430, 208)
-        Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(66, 20)
-        Me.lblPrice.TabIndex = 11
-        Me.lblPrice.Text = "Label24"
-        '
         'Movie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1344,4 +1368,6 @@ Partial Class Movie
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
+    Friend WithEvents btnOrder As Button
+    Friend WithEvents lblSeat As Label
 End Class

@@ -6,7 +6,12 @@ Public Class Movie
     Public acsconn As New OleDbConnection 'listview
     Public ds As New DataSet
     Dim dr As OleDbDataReader
+    Dim seatCount As Integer
+    Dim choosenSeat As New ArrayList()
+    Dim ticketID As String
+    Dim total As Double
     Dim movie As String
+    Dim movieName1 As String
     Dim movieDate As String
     Dim movieTime As String
     Dim movieHall As String
@@ -71,6 +76,7 @@ Public Class Movie
             btnNext1.Hide()
             MovieDetailsPanel.Visible = True
             movie = MovieListView.Items(MovieListView.FocusedItem.Index).SubItems(0).Text
+            movieName1 = movie
             movieName.Text = movie
             Label5.Text = movie
             Label27.Text = movie
@@ -252,16 +258,140 @@ Public Class Movie
         End Try
     End Sub
 
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
+    Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
         If CType(sender, PictureBox).Image Is availableSeat Then
             CType(sender, PictureBox).Image = defaultSeat
+            seatCount -= 1
+            choosenSeat.Remove(CType(sender, PictureBox).Name)
         ElseIf CType(sender, PictureBox).Image Is defaultSeat Then
             CType(sender, PictureBox).Image = availableSeat
+            seatCount += 1
+            choosenSeat.Add(CType(sender, PictureBox).Name)
         End If
     End Sub
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
         panelOrder.Visible = True
+        lblMovieName.Text = movieName1
+        Try
+            Dim cmd As New OleDbCommand
+            conn.Open()
+            cmd.CommandText = "SELECT * FROM TicketPurchasement"
+            cmd.Connection = conn
+
+            dr = cmd.ExecuteReader
+
+            Do While dr.Read
+                ticketID = dr.GetString(0)
+            Loop
+            Dim tmpTicket As String = ticketID.Substring(1, 13)
+            ticketID = "T" + (Convert.ToInt64(tmpTicket) + 1).ToString
+            lblTicketID.Text = ticketID
+            conn.Close()
+            dr.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+
+
+        lblPax.Text = seatCount
+
+        Dim price As Double = 10.0
+        total = seatCount * price
+
+        lblPrice.Text = "RM" + seatCount.ToString + " x RM" + String.Format("{0:0.00}", price.ToString) + "/pax" + Environment.NewLine + "Total Price = RM" + String.Format("{0:0.00}", total.ToString)
+        lblHall.Text = movieHall.Substring(1)
+        Dim showSeat As String = ""
+        Try
+            For Each seat In choosenSeat
+                Dim cmd As New OleDbCommand
+                conn.Open()
+                cmd.CommandText = "SELECT * FROM Seats WHERE SeatID = ?"
+                cmd.Connection = conn
+                cmd.Parameters.AddWithValue("@p1", seat.ToString.Substring(10))
+                dr = cmd.ExecuteReader
+                Do While dr.Read
+
+                    showSeat += dr.GetString(1).ToString + dr.GetString(2).ToString + ", "
+
+                Loop
+
+                conn.Close()
+                dr.Close()
+            Next
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        lblSeat.Text = showSeat.Substring(0, showSeat.Length - 2)
+
     End Sub
 
+    Private Sub backLogo3_Click_1(sender As Object, e As EventArgs) Handles backLogo3.Click
+        panelOrder.Visible = False
+    End Sub
+
+    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
+
+        Try
+            For Each seat In choosenSeat
+                Dim cmd As New OleDbCommand
+                conn.Open()
+                cmd.CommandText = "INSERT INTO TicketDetails(TicketID,SeatID,HallID) VALUES (?,?,?)"
+                cmd.Connection = conn
+                cmd.Parameters.AddWithValue("@p1", ticketID)
+                cmd.Parameters.AddWithValue("@p2", seat.ToString.Substring(10))
+                cmd.Parameters.AddWithValue("@p3", movieHall)
+                cmd.ExecuteNonQuery()
+                conn.Close()
+
+            Next
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        Try
+            Dim cmd As New OleDbCommand
+            conn.Open()
+            cmd.CommandText = "INSERT INTO TicketPurchasement(TicketID,Price,EmployeeID,ScheduleID,PurchaseDate,Status) VALUES (?,?,?,?,?,?)"
+            cmd.Connection = conn
+            cmd.Parameters.AddWithValue("@p1", ticketID)
+            cmd.Parameters.AddWithValue("@p2", total)
+            cmd.Parameters.AddWithValue("@p3", "S1000001")
+            cmd.Parameters.AddWithValue("@p4", scheduleID)
+            cmd.Parameters.AddWithValue("@p5", String.Format("{0:M/d/yyyy}", DateTime.Now))
+            cmd.Parameters.AddWithValue("@p6", "Paid")
+            cmd.ExecuteNonQuery()
+            conn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        seatCount = 0
+        choosenSeat.Clear()
+        ticketID = ""
+        total = 0
+        movie = ""
+        movieName1 = ""
+        movieDate = ""
+        movieTime = ""
+        movieHall = ""
+        scheduleID = ""
+        seatID.Clear()
+
+        MessageBox.Show("Purchase Success!", "Purchase")
+
+        panelOrder.Visible = False
+        panelHall.Visible = False
+        MovieDetailsPanel.Visible = False
+        MovieListView.Show()
+        btnNext1.Show()
+
+
+
+    End Sub
 End Class
