@@ -224,6 +224,13 @@ Public Class Movie
     Private Sub backLogo2_Click(sender As Object, e As EventArgs) Handles backLogo2.Click
         MovieDetailsPanel.Visible = True
         panelHall.Visible = False
+        seatID.Clear()
+        choosenSeat.Clear()
+        movieDate = Nothing
+        movieHall = Nothing
+        movieHall = Nothing
+        seatCount = Nothing
+        total = Nothing
     End Sub
 
     Private Sub backLogo3_Click(sender As Object, e As EventArgs)
@@ -238,7 +245,9 @@ Public Class Movie
         For Each c In Me.Panel5.Controls
             If TypeOf (c) Is PictureBox Then
                 CType(c, PictureBox).Image = defaultSeat
+                c.Controls.Clear()
                 AddHandler c.Click, AddressOf PictureBox10_Click
+                c.Controls.Clear()
             End If
         Next
 
@@ -259,14 +268,18 @@ Public Class Movie
     End Sub
 
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
-        If CType(sender, PictureBox).Image Is availableSeat Then
+        Dim chosenFlag As Boolean = False
+
+        If CType(sender, PictureBox).Image Is availableSeat And chosenFlag = True Then
             CType(sender, PictureBox).Image = defaultSeat
             seatCount -= 1
             choosenSeat.Remove(CType(sender, PictureBox).Name)
-        ElseIf CType(sender, PictureBox).Image Is defaultSeat Then
+            chosenFlag = False
+        ElseIf CType(sender, PictureBox).Image Is defaultSeat And chosenFlag = False Then
             CType(sender, PictureBox).Image = availableSeat
             seatCount += 1
             choosenSeat.Add(CType(sender, PictureBox).Name)
+            chosenFlag = True
         End If
     End Sub
 
@@ -371,16 +384,16 @@ Public Class Movie
             MsgBox(ex.Message)
         End Try
 
-        seatCount = 0
+        seatCount = Nothing
         choosenSeat.Clear()
-        ticketID = ""
-        total = 0
-        movie = ""
-        movieName1 = ""
-        movieDate = ""
-        movieTime = ""
-        movieHall = ""
-        scheduleID = ""
+        ticketID = Nothing
+        total = Nothing
+        movie = Nothing
+        movieName1 = Nothing
+        movieDate = Nothing
+        movieTime = Nothing
+        movieHall = Nothing
+        scheduleID = Nothing
         seatID.Clear()
 
         MessageBox.Show("Purchase Success!", "Purchase")
