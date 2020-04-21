@@ -4,7 +4,7 @@ Public Class Home
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim oConn As OleDb.OleDbConnection = New OleDb.OleDbConnection
-        oConn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\khai xiang\Source\Repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb"
+        oConn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\college material\vb assignment\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb"
         oConn.Open()
         Dim sSql As String = "SELECT * FROM EMPLOYEES WHERE EmployeeID ='" & PubVar & "';"
         Dim cmd As OleDbCommand = New OleDbCommand(sSql, oConn)
@@ -38,12 +38,6 @@ Public Class Home
     Private Sub lblProfile_Click(sender As Object, e As EventArgs) Handles lblProfile.Click
         Me.Hide()
         userProfile.Visible = True
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        Me.Close()
-        Movie.Show()
 
     End Sub
 End Class

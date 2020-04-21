@@ -11,10 +11,8 @@ Public Class Movie
     Dim movieTime As String
     Dim movieHall As String
     Dim scheduleID As String
-    Dim seatID As New ArrayList()
-    Dim defaultSeat As New System.Drawing.Bitmap(My.Resources.seatdefault)
-    Dim availableSeat As New System.Drawing.Bitmap(My.Resources.seatavailable)
-    Dim unavailableSeat As New System.Drawing.Bitmap(My.Resources.seatunavailable)
+    Dim seatID As ArrayList
+
     Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
 
     End Sub
@@ -73,7 +71,6 @@ Public Class Movie
             movie = MovieListView.Items(MovieListView.FocusedItem.Index).SubItems(0).Text
             movieName.Text = movie
             Label5.Text = movie
-            Label27.Text = movie
             conn.Open()
             ComboBox1.Items.Clear()
             Dim cmd As New OleDbCommand
@@ -123,12 +120,10 @@ Public Class Movie
 
     Sub getScheduleID()
         Dim cmd As New OleDbCommand
-        Dim oDate As DateTime = Convert.ToDateTime(movieDate)
-        Dim mDate = DateTime.Parse(oDate).ToString("M/d/yyyy")
         conn.Open()
-        cmd.CommandText = "SELECT * FROM MovieSchedule WHERE MovieDate = ? AND ScreeningTime = ? AND HallID = ?"
+        cmd.CommandText = "SELECT * FROM MovieSchedule WHERE MovieDate = ?, MovieTime = ?, HallID = ?"
         cmd.Connection = conn
-        cmd.Parameters.AddWithValue("@p1", mDate)
+        cmd.Parameters.AddWithValue("@p1", movieDate)
         cmd.Parameters.AddWithValue("@p2", movieTime)
         cmd.Parameters.AddWithValue("@p3", movieHall)
 
@@ -150,14 +145,7 @@ Public Class Movie
         cmd.Parameters.AddWithValue("@p1", scheduleID)
 
         dr = cmd.ExecuteReader
-        Dim count As Integer
-        Do While dr.Read
-            count += 1
-        Loop
-        Dim ticketID(count - 1) As String
-        count = 0
-        dr.Close()
-        dr = cmd.ExecuteReader
+        Dim ticketID(dr.FieldCount) As String
         Dim i As Integer = 0
         While dr.Read
             ticketID(i) = dr.GetString(0)
@@ -173,7 +161,7 @@ Public Class Movie
 
     Sub getTicketDetails(ByVal ParamArray ticketID() As String)
         conn.Open()
-        For x = 0 To ticketID.Length - 1 Step 1
+        For x = 0 To ticketID.Length Step 1
 
 
             Dim cmd As New OleDbCommand
@@ -192,76 +180,52 @@ Public Class Movie
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         If ComboBox1.SelectedIndex > -1 Then
-            movieHall = ComboBox1.SelectedItem.ToString().Substring(ComboBox1.SelectedItem.ToString().Length - 2)
+            movieHall = ComboBox1.SelectedItem.ToString().Substring(ComboBox1.SelectedItem.ToString().Length - 5)
             movieDate = ComboBox1.SelectedItem.ToString().Substring(0, 8)
-            movieTime = ComboBox1.SelectedItem.ToString().Substring(11, 4)
+            movieTime = ComboBox1.SelectedItem.ToString().Substring(9, 4)
 
             getScheduleID()
             getTicketID()
 
-            Hall()
-
-            panelHall.Visible = True
-
+            'Small Hall
+            panelSmall.Visible = True
         Else
             MsgBox("Select an option")
         End If
 
     End Sub
 
-    Private Sub backLogo1_Click(sender As Object, e As EventArgs) Handles backLogo1.Click
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
         MovieListView.Show()
         MovieDetailsPanel.Visible = False
         btnNext1.Visible = True
     End Sub
 
-    Private Sub backLogo2_Click(sender As Object, e As EventArgs) Handles backLogo2.Click
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         MovieDetailsPanel.Visible = True
-        panelHall.Visible = False
+        panelSmall.Visible = False
     End Sub
 
-    Private Sub backLogo3_Click(sender As Object, e As EventArgs)
-        panelOrder.Visible = False
-        panelHall.Visible = True
-        MovieDetailsPanel.Visible = False
-    End Sub
+    Private Sub panelSmall_VisibleChanged(sender As Object, e As PaintEventArgs) Handles panelSmall.VisibleChanged
+        Dim control As Control
 
-    Sub Hall()
-        Dim c As Control
-
-        For Each c In Me.Panel5.Controls
-            If TypeOf (c) Is PictureBox Then
-                CType(c, PictureBox).Image = defaultSeat
-                AddHandler c.Click, AddressOf PictureBox10_Click
+        For Each control In Me.Controls
+            If TypeOf (control) Is PictureBox Then
+                CType(control, PictureBox).Image = My.Resources.seatdefault
+                AddHandler control.Click, AddressOf H1A6_Click
             End If
         Next
 
-        Try
-            For i As Integer = 1 To 30
-                If seatID.Contains(i.ToString) Then
-                    Dim con() As Control
-                    con = Me.Controls.Find("PictureBox" & i.ToString(), True)
-                    DirectCast(con(0), PictureBox).Image = unavailableSeat
-                    DirectCast(con(0), PictureBox).Cursor = Cursors.Default
-                End If
-            Next
-        Catch ex As Exception
+        For Each x In scheduleID
 
-        Finally
-            seatID.Clear()
-        End Try
+        Next
     End Sub
 
-    Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
-        If CType(sender, PictureBox).Image Is availableSeat Then
-            CType(sender, PictureBox).Image = defaultSeat
-        ElseIf CType(sender, PictureBox).Image Is defaultSeat Then
-            CType(sender, PictureBox).Image = availableSeat
+    Private Sub H1A6_Click(sender As Object, e As EventArgs) Handles H1A6.Click
+        If CType(sender, PictureBox).Image Is My.Resources.seatunavailable Then
+            CType(sender, PictureBox).Image = My.Resources.seatavailable
+        ElseIf CType(sender, PictureBox).Image Is My.Resources.seatavailable Then
+            CType(sender, PictureBox).Image = My.Resources.seatunavailable
         End If
     End Sub
-
-    Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
-        panelOrder.Visible = True
-    End Sub
-
 End Class
