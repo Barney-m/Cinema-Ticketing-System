@@ -83,6 +83,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMovie.designer.vb">
+      <DependentUpon>AddMovie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddMovie.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminHome.Designer.vb">
       <DependentUpon>AdminHome.vb</DependentUpon>
     </Compile>
@@ -93,6 +99,12 @@
       <DependentUpon>chgPassword.vb</DependentUpon>
     </Compile>
     <Compile Include="chgPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgetPass.designer.vb">
+      <DependentUpon>forgetPass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forgetPass.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.vb">
@@ -111,6 +123,12 @@
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyMovie.designer.vb">
+      <DependentUpon>ModifyMovie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyMovie.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModifyStaff.Designer.vb">
@@ -154,6 +172,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PublicVar.vb" />
+    <Compile Include="RemoveMovie.designer.vb">
+      <DependentUpon>RemoveMovie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveMovie.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="removeStaff.Designer.vb">
       <DependentUpon>removeStaff.vb</DependentUpon>
     </Compile>
@@ -179,11 +203,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddMovie.resx">
+      <DependentUpon>AddMovie.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="chgPassword.resx">
       <DependentUpon>chgPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgetPass.resx">
+      <DependentUpon>forgetPass.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
@@ -193,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyMovie.resx">
+      <DependentUpon>ModifyMovie.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyStaff.resx">
       <DependentUpon>ModifyStaff.vb</DependentUpon>
@@ -208,6 +241,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveMovie.resx">
+      <DependentUpon>RemoveMovie.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="removeStaff.resx">
       <DependentUpon>removeStaff.vb</DependentUpon>
