@@ -4,7 +4,7 @@ Public Class Movie
 
     Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\khai xiang\source\repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
     Public acsconn As New OleDbConnection 'listview
-    Public ds As New DataSet
+    Public dt As New DataTable
     Dim dr As OleDbDataReader
     Dim seatCount As Integer
     Dim choosenSeat As New ArrayList()
@@ -20,9 +20,6 @@ Public Class Movie
     Dim defaultSeat As New System.Drawing.Bitmap(My.Resources.seatdefault)
     Dim availableSeat As New System.Drawing.Bitmap(My.Resources.seatavailable)
     Dim unavailableSeat As New System.Drawing.Bitmap(My.Resources.seatunavailable)
-    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
-
-    End Sub
 
     Private Sub Movie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MovieListView.View = View.LargeIcon
@@ -42,17 +39,28 @@ Public Class Movie
             Dim imglist As New ImageList()
             MovieImg.ImageSize = New Size(200, 200)
 
-
+            Dim cmd As New OleDbCommand
             conn.Open()
-            query = "SELECT * FROM Movies"
+            query = "SELECT * FROM Movies WHERE MovieStatus = 'Up'"
             Dim da As New OleDbDataAdapter
             da = New OleDbDataAdapter(query, conn)
-            da.Fill(ds, "Movie")
+            da.Fill(dt)
             conn.Close()
             Dim i As Integer = 0
-            For Each row As DataRow In ds.Tables(0).Rows
+            For Each row As DataRow In dt.Rows
+                Dim img_buffer As Byte() = DirectCast(row("MovieImage"), Byte())
+
+                Dim img_stream As New IO.MemoryStream(img_buffer)
+
+                'img_stream.Write(img_buffer, 0, img_buffer.Length)
+                MovieImg.Images.Add(row("MovieName").ToString(), New Bitmap(img_stream))
+                img_stream.Close()
+
+
+
+
+
                 MovieListView.Items.Add(row.ItemArray(1).ToString, i)
-                MovieImg.Images.Add(Image.FromFile("C:\Users\khai xiang\source\repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\images\Avengers.jpg"))
                 i += 1
             Next
 

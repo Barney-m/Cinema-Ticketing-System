@@ -2,7 +2,7 @@
 Imports System.IO
 
 Public Class ModifyMovie
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\PohRemg\Desktop\Visual Basic Assignment\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\khai xiang\Source\Repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
     Dim cmd As OleDbCommand
     Dim imgpath As String
     Dim arrImage() As Byte

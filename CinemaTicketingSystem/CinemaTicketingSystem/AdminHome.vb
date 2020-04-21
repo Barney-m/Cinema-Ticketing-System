@@ -77,10 +77,25 @@
     End Sub
 
     Private Sub btnModifyStaff_Click(sender As Object, e As EventArgs) Handles btnModifyStaff.Click
+        Me.Hide()
         ModifyStaff.Show(Me)
     End Sub
 
     Private Sub btnRemoveStaff_Click(sender As Object, e As EventArgs) Handles btnRemoveStaff.Click
         removeStaff.Show(Me)
+    End Sub
+
+    Private Sub btnMovie_Click(sender As Object, e As EventArgs) Handles btnMovie.Click
+
+    End Sub
+
+    Private Sub btnModifyMovie_Click(sender As Object, e As EventArgs) Handles btnModifyMovie.Click
+        ModifyMovie.Show()
+
+    End Sub
+
+    Private Sub btnAddMovie_Click(sender As Object, e As EventArgs) Handles btnAddMovie.Click
+        AddMovie.Show()
+
     End Sub
 End Class
