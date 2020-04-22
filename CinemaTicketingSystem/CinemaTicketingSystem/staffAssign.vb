@@ -7,7 +7,7 @@ Public Class staffAssign
     Dim cmd As OleDbCommand
 
     Private Sub staffAssign_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the '_AstronomiaDb__1_DataSet.Employees' table. You can move, or remove it, as needed.
+        'TODO: This line of code loads data into the 'AstronomiaDb_1_DataSet.Employees' table. You can move, or remove it, as needed.
         updatedgv()
 
         txtName.Text = ""
@@ -49,6 +49,8 @@ Public Class staffAssign
         Dim result As Object = Nothing
 
         conn.Open()
+        Dim tdate As Date = Date.Now.ToShortDateString()
+
         Dim sqlString As String = "Select EmployeeID from Employees ORDER BY EmployeeID DESC"
         cmd = New OleDbCommand(sqlString, conn)
 
@@ -94,7 +96,7 @@ Public Class staffAssign
 
             conn.Open()
 
-            Dim query As String = "insert into Employees (EmployeeID,Full_Name,Birth_Date,Phone_No,Address,[E-mail],Salary,JobID,Status,[Password]) values (?,?,?,?,?,?,?,?,?,?)"
+            Dim query As String = "insert into Employees (EmployeeID,Full_Name,Birth_Date,Phone_No,Address,[E-mail],Salary,JobID,Status,[Password],recruitedDate) values (?,?,?,?,?,?,?,?,?,?,?)"
 
             cmd = New OleDbCommand(query, conn)
             cmd.Parameters.AddWithValue("@id", result)
@@ -107,6 +109,7 @@ Public Class staffAssign
             cmd.Parameters.AddWithValue("@job", job)
             cmd.Parameters.AddWithValue("@status", CbStatus.Text)
             cmd.Parameters.AddWithValue("@password", EncPassword)
+            cmd.Parameters.AddWithValue("@recruiteDate", tdate)
 
 
 
