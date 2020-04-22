@@ -230,15 +230,11 @@ Public Class Movie
     End Sub
 
     Private Sub backLogo2_Click(sender As Object, e As EventArgs) Handles backLogo2.Click
-        MovieDetailsPanel.Visible = True
-        panelHall.Visible = False
-        seatID.Clear()
-        choosenSeat.Clear()
-        movieDate = Nothing
-        movieHall = Nothing
-        movieHall = Nothing
-        seatCount = Nothing
-        total = Nothing
+        Me.Close()
+        Redirect.Show()
+
+
+
     End Sub
 
     Private Sub backLogo3_Click(sender As Object, e As EventArgs)
@@ -276,19 +272,16 @@ Public Class Movie
     End Sub
 
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
-        Dim chosenFlag As New Boolean
-        chosenFlag = False
-
-        If CType(sender, PictureBox).Image Is availableSeat And chosenFlag = False Then
+        If CType(sender, PictureBox).Image Is availableSeat Then
             CType(sender, PictureBox).Image = defaultSeat
             seatCount -= 1
             choosenSeat.Remove(CType(sender, PictureBox).Name)
-            chosenFlag = True
-        ElseIf CType(sender, PictureBox).Image Is defaultSeat And chosenFlag = False Then
+
+        ElseIf CType(sender, PictureBox).Image Is defaultSeat Then
             CType(sender, PictureBox).Image = availableSeat
             seatCount += 1
             choosenSeat.Add(CType(sender, PictureBox).Name)
-            chosenFlag = True
+
         End If
     End Sub
 
@@ -407,11 +400,9 @@ Public Class Movie
 
         MessageBox.Show("Purchase Success!", "Purchase")
 
-        panelOrder.Visible = False
-        panelHall.Visible = False
-        MovieDetailsPanel.Visible = False
-        MovieListView.Show()
-        btnNext1.Show()
+        Me.Close()
+        Redirect.Show()
+
 
 
 

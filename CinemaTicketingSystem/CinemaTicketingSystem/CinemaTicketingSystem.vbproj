@@ -154,6 +154,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="PublicVar.vb" />
+    <Compile Include="Redirect.Designer.vb">
+      <DependentUpon>Redirect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Redirect.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RemoveMovie.designer.vb">
       <DependentUpon>RemoveMovie.vb</DependentUpon>
     </Compile>
@@ -229,6 +235,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Redirect.resx">
+      <DependentUpon>Redirect.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemoveMovie.resx">
       <DependentUpon>RemoveMovie.vb</DependentUpon>

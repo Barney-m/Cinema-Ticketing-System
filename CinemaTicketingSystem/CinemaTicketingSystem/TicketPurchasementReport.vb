@@ -3,6 +3,7 @@ Public Class TicketPurchasementReport
 
     Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\khai xiang\Source\Repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
     Dim cmd As OleDbCommand
+    Dim day As Integer = 0
     Dim report As String
 
     Private Sub btnDaily_Click(sender As Object, e As EventArgs) Handles btnDaily.Click
@@ -40,35 +41,37 @@ Public Class TicketPurchasementReport
     Sub dailyReport()
         conn.Open()
         Dim date1 As String = txtDay.Text + "/" + cbMonth.Text + "/" + cbYear.Text
+        Try
+            Dim oDate As DateTime = Convert.ToDateTime(date1)
+            Dim query = "SELECT * FROM TicketPurchasement WHERE PurchaseDate = ? ORDER BY [TicketID] ASC"
 
-        Dim oDate As DateTime = Convert.ToDateTime(date1)
-        Dim query = "SELECT * FROM TicketPurchasement WHERE PurchaseDate = ? ORDER BY [TicketID] ASC"
+            cmd = New OleDbCommand(query, conn)
 
-        cmd = New OleDbCommand(query, conn)
-
-        cmd.Parameters.AddWithValue("@p1", oDate)
-
-
-        Dim dr As OleDbDataReader = cmd.ExecuteReader
+            cmd.Parameters.AddWithValue("@p1", oDate)
 
 
-        ListView1.Items.Clear()
+            Dim dr As OleDbDataReader = cmd.ExecuteReader
 
-        Dim x As ListViewItem
-        If dr.HasRows Then
-            Do While dr.Read = True
-                x = New ListViewItem(dr("TicketID").ToString)
-                x.SubItems.Add(dr("EmployeeID"))
-                x.SubItems.Add(dr("ScheduleID"))
-                x.SubItems.Add(dr("Price"))
-                x.SubItems.Add(dr("PurchaseDate"))
-                ListView1.Items.Add(x)
-            Loop
-        Else
-            MessageBox.Show("No data at this date!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-        End If
+            ListView1.Items.Clear()
 
+            Dim x As ListViewItem
+            If dr.HasRows Then
+                Do While dr.Read = True
+                    x = New ListViewItem(dr("TicketID").ToString)
+                    x.SubItems.Add(dr("EmployeeID"))
+                    x.SubItems.Add(dr("ScheduleID"))
+                    x.SubItems.Add(dr("Price"))
+                    x.SubItems.Add(dr("PurchaseDate"))
+                    ListView1.Items.Add(x)
+                Loop
+            Else
+                MessageBox.Show("No data at this date!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            End If
+        Catch ex As Exception
+            MsgBox("Please choose a valid date!")
+        End Try
         conn.Close()
     End Sub
 
@@ -159,11 +162,11 @@ Public Class TicketPurchasementReport
     End Sub
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
-        If report = "monthly" Then
+        If report = "daily" Then
             dailyReport()
-        ElseIf report = "yearly" Then
+        ElseIf report = "monthly" Then
             monthlyReport()
-        ElseIf report = "daily" Then
+        ElseIf report = "yearly" Then
             yearlyReport()
         End If
     End Sub
