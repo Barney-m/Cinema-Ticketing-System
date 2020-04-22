@@ -163,6 +163,7 @@ Partial Class staffAssign
         '
         Me.txtPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPhone.Location = New System.Drawing.Point(137, 119)
+        Me.txtPhone.MaxLength = 10
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(253, 26)
         Me.txtPhone.TabIndex = 10

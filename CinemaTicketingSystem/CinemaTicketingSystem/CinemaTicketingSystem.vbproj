@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{08EEA9F6-5A20-4993-AB25-90447642D273}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>CinemaTicketingSystem.Login</StartupObject>
+    <StartupObject>CinemaTicketingSystem.My.MyApplication</StartupObject>
     <RootNamespace>CinemaTicketingSystem</RootNamespace>
     <AssemblyName>CinemaTicketingSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -166,6 +166,12 @@
     <Compile Include="staffAssign.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="staffRegistReport.Designer.vb">
+      <DependentUpon>staffRegistReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staffRegistReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="userProfile.Designer.vb">
       <DependentUpon>userProfile.vb</DependentUpon>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="staffAssign.resx">
       <DependentUpon>staffAssign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffRegistReport.resx">
+      <DependentUpon>staffRegistReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userProfile.resx">
       <DependentUpon>userProfile.vb</DependentUpon>
