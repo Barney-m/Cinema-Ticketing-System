@@ -415,4 +415,24 @@ Public Class Movie
 
 
     End Sub
+
+    Private Sub lblOverview_Click(sender As Object, e As EventArgs) Handles lblOverview.Click
+        Me.Hide()
+        Home.Visible = True
+    End Sub
+
+    Private Sub overviewLogo_Click(sender As Object, e As EventArgs) Handles overviewLogo.Click
+        Me.Hide()
+        Home.Visible = True
+    End Sub
+
+    Private Sub lblProfile_Click(sender As Object, e As EventArgs) Handles lblProfile.Click
+        Me.Hide()
+        userProfile.Visible = True
+    End Sub
+
+    Private Sub profileLogo_Click(sender As Object, e As EventArgs) Handles profileLogo.Click
+        Me.Hide()
+        userProfile.Visible = True
+    End Sub
 End Class

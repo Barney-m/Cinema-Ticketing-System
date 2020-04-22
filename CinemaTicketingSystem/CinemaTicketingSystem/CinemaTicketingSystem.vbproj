@@ -113,12 +113,6 @@
     <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InsertImage.Designer.vb">
-      <DependentUpon>InsertImage.vb</DependentUpon>
-    </Compile>
-    <Compile Include="InsertImage.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -143,12 +137,6 @@
     <Compile Include="Movie.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MovieImageInsertProtocol.Designer.vb">
-      <DependentUpon>MovieImageInsertProtocol.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MovieImageInsertProtocol.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -164,12 +152,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Payment.Designer.vb">
-      <DependentUpon>Payment.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Payment.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="PublicVar.vb" />
     <Compile Include="RemoveMovie.designer.vb">
@@ -188,6 +170,12 @@
       <DependentUpon>staffAssign.vb</DependentUpon>
     </Compile>
     <Compile Include="staffAssign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffRegistReport.designer.vb">
+      <DependentUpon>staffRegistReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staffRegistReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="userProfile.Designer.vb">
@@ -218,9 +206,6 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InsertImage.resx">
-      <DependentUpon>InsertImage.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -232,9 +217,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Movie.resx">
       <DependentUpon>Movie.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MovieImageInsertProtocol.resx">
-      <DependentUpon>MovieImageInsertProtocol.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -250,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="staffAssign.resx">
       <DependentUpon>staffAssign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffRegistReport.resx">
+      <DependentUpon>staffRegistReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userProfile.resx">
       <DependentUpon>userProfile.vb</DependentUpon>
@@ -282,21 +267,16 @@
     <Content Include="AstronomiaDb %281%29.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="images\Avengers.jpg" />
     <Content Include="images\back.png" />
-    <Content Include="images\DanceBound.png" />
-    <Content Include="images\GrownUps.jpg" />
+    <Content Include="images\logo.ico" />
     <Content Include="images\logo.png" />
     <Content Include="images\movielogo.png" />
     <Content Include="images\overviewlogo.png" />
-    <Content Include="images\Parasite.jpg" />
     <Content Include="images\profilelogo.png" />
     <Content Include="images\seatavailable.png" />
     <Content Include="images\seatdefault.png" />
     <Content Include="images\seatunavailable.png" />
     <Content Include="images\signoutlogo.png" />
-    <Content Include="images\SpidermanFarFromHome.jpg" />
-    <Content Include="images\TheIncredibles2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

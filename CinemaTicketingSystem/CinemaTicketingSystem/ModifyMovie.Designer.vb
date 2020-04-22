@@ -22,6 +22,7 @@ Partial Class ModifyMovie
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ModifyMovie))
         Me.TextMid = New System.Windows.Forms.TextBox()
         Me.MovieID = New System.Windows.Forms.Label()
         Me.PicMovie = New System.Windows.Forms.PictureBox()
@@ -214,8 +215,12 @@ Partial Class ModifyMovie
         Me.Controls.Add(Me.PicMovie)
         Me.Controls.Add(Me.MovieID)
         Me.Controls.Add(Me.TextMid)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "ModifyMovie"
-        Me.Text = "ModifyMovie"
+        Me.Text = "Astronomia"
         CType(Me.PicMovie, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

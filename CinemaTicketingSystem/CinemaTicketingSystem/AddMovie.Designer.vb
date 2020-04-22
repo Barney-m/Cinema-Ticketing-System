@@ -22,6 +22,7 @@ Partial Class AddMovie
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddMovie))
         Me.MovieIMG = New System.Windows.Forms.PictureBox()
         Me.TextID = New System.Windows.Forms.TextBox()
         Me.TextName = New System.Windows.Forms.TextBox()
@@ -204,8 +205,13 @@ Partial Class AddMovie
         Me.Controls.Add(Me.TextName)
         Me.Controls.Add(Me.TextID)
         Me.Controls.Add(Me.MovieIMG)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "AddMovie"
-        Me.Text = "AddMovie"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Astronomia"
         CType(Me.MovieIMG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

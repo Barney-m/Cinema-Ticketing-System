@@ -84,4 +84,24 @@ Public Class userProfile
     Private Sub btnChgPass_Click(sender As Object, e As EventArgs) Handles btnChgPass.Click
         chgPassword.Show(Me)
     End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        Me.Hide()
+        Movie.Visible = True
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.Hide()
+        Movie.Visible = True
+    End Sub
+
+    Private Sub lblOverview_Click(sender As Object, e As EventArgs) Handles lblOverview.Click
+        Me.Hide()
+        Home.Visible = True
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        Me.Hide()
+        Home.Visible = True
+    End Sub
 End Class

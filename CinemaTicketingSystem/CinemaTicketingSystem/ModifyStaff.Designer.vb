@@ -60,10 +60,9 @@ Partial Class ModifyStaff
         Me.DTdob.Enabled = False
         Me.DTdob.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTdob.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTdob.Location = New System.Drawing.Point(183, 98)
-        Me.DTdob.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DTdob.Location = New System.Drawing.Point(137, 80)
         Me.DTdob.Name = "DTdob"
-        Me.DTdob.Size = New System.Drawing.Size(336, 26)
+        Me.DTdob.Size = New System.Drawing.Size(253, 22)
         Me.DTdob.TabIndex = 20
         '
         'EmployeesBindingSource
@@ -80,10 +79,10 @@ Partial Class ModifyStaff
         '
         Me.txtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "E-mail", True))
         Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(183, 241)
-        Me.txtEmail.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtEmail.Location = New System.Drawing.Point(137, 196)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(336, 30)
+        Me.txtEmail.Size = New System.Drawing.Size(253, 26)
         Me.txtEmail.TabIndex = 19
         '
         'CbSalary
@@ -92,30 +91,27 @@ Partial Class ModifyStaff
         Me.CbSalary.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbSalary.FormattingEnabled = True
         Me.CbSalary.Items.AddRange(New Object() {"2000", "5000", "10000"})
-        Me.CbSalary.Location = New System.Drawing.Point(183, 295)
-        Me.CbSalary.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CbSalary.Location = New System.Drawing.Point(137, 240)
         Me.CbSalary.Name = "CbSalary"
-        Me.CbSalary.Size = New System.Drawing.Size(336, 28)
+        Me.CbSalary.Size = New System.Drawing.Size(253, 24)
         Me.CbSalary.TabIndex = 17
         '
         'txtAddress
         '
         Me.txtAddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "Address", True))
         Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddress.Location = New System.Drawing.Point(183, 196)
-        Me.txtAddress.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtAddress.Location = New System.Drawing.Point(137, 159)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(336, 30)
+        Me.txtAddress.Size = New System.Drawing.Size(253, 26)
         Me.txtAddress.TabIndex = 11
         '
         'txtPhone
         '
         Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "Phone_No", True))
         Me.txtPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhone.Location = New System.Drawing.Point(183, 146)
-        Me.txtPhone.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPhone.Location = New System.Drawing.Point(137, 119)
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(336, 30)
+        Me.txtPhone.Size = New System.Drawing.Size(253, 26)
         Me.txtPhone.TabIndex = 10
         '
         'txtName
@@ -123,20 +119,18 @@ Partial Class ModifyStaff
         Me.txtName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "Full_Name", True))
         Me.txtName.Enabled = False
         Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.Location = New System.Drawing.Point(183, 44)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtName.Location = New System.Drawing.Point(137, 36)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(336, 30)
+        Me.txtName.Size = New System.Drawing.Size(253, 26)
         Me.txtName.TabIndex = 8
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(80, 292)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(60, 237)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 29)
+        Me.Label1.Size = New System.Drawing.Size(58, 23)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Salary :"
         '
@@ -144,10 +138,9 @@ Partial Class ModifyStaff
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(87, 241)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(65, 196)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(67, 29)
+        Me.Label5.Size = New System.Drawing.Size(52, 23)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Email :"
         '
@@ -155,10 +148,9 @@ Partial Class ModifyStaff
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(56, 146)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(42, 119)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 29)
+        Me.Label3.Size = New System.Drawing.Size(74, 23)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Phone No :"
         '
@@ -166,10 +158,9 @@ Partial Class ModifyStaff
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(48, 95)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(36, 77)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 29)
+        Me.Label2.Size = New System.Drawing.Size(80, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Birth Date :"
         '
@@ -177,10 +168,9 @@ Partial Class ModifyStaff
         '
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.Location = New System.Drawing.Point(51, 44)
-        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblName.Location = New System.Drawing.Point(38, 36)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(103, 29)
+        Me.lblName.Size = New System.Drawing.Size(79, 23)
         Me.lblName.TabIndex = 0
         Me.lblName.Text = "Full Name :"
         '
@@ -199,20 +189,18 @@ Partial Class ModifyStaff
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.lblName)
-        Me.Panel2.Location = New System.Drawing.Point(60, 270)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(45, 219)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(573, 374)
+        Me.Panel2.Size = New System.Drawing.Size(430, 304)
         Me.Panel2.TabIndex = 9
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(65, 196)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(49, 159)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 29)
+        Me.Label4.Size = New System.Drawing.Size(68, 23)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Address :"
         '
@@ -225,10 +213,9 @@ Partial Class ModifyStaff
         Me.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
         Me.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSignOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSignOut.Location = New System.Drawing.Point(1516, 28)
-        Me.btnSignOut.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSignOut.Location = New System.Drawing.Point(1137, 23)
         Me.btnSignOut.Name = "btnSignOut"
-        Me.btnSignOut.Size = New System.Drawing.Size(129, 58)
+        Me.btnSignOut.Size = New System.Drawing.Size(97, 47)
         Me.btnSignOut.TabIndex = 1
         Me.btnSignOut.Text = "Sign Out"
         Me.btnSignOut.UseVisualStyleBackColor = False
@@ -240,18 +227,16 @@ Partial Class ModifyStaff
         Me.Panel1.Controls.Add(Me.btnSignOut)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1685, 114)
+        Me.Panel1.Size = New System.Drawing.Size(1264, 93)
         Me.Panel1.TabIndex = 10
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(5, 7)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 6)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(163, 101)
+        Me.PictureBox1.Size = New System.Drawing.Size(122, 82)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
@@ -260,10 +245,9 @@ Partial Class ModifyStaff
         '
         Me.dgv.AllowUserToOrderColumns = True
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Location = New System.Drawing.Point(684, 270)
-        Me.dgv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgv.Location = New System.Drawing.Point(513, 219)
         Me.dgv.Name = "dgv"
-        Me.dgv.Size = New System.Drawing.Size(859, 325)
+        Me.dgv.Size = New System.Drawing.Size(644, 264)
         Me.dgv.TabIndex = 11
         '
         'EmployeesTableAdapter
@@ -272,37 +256,40 @@ Partial Class ModifyStaff
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(783, 617)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancel.Location = New System.Drawing.Point(587, 501)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(100, 28)
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 13
         Me.btnCancel.Text = "Close"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(675, 617)
-        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnUpdate.Location = New System.Drawing.Point(506, 501)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(100, 28)
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 12
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'ModifyStaff
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1685, 838)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "ModifyStaff"
-        Me.Text = "ModifyStaff"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Astronomia"
         CType(Me.EmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)

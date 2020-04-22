@@ -47,4 +47,23 @@ Public Class Home
         Movie.Visible = True
 
     End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Me.Hide()
+
+        Movie.Visible = True
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Me.Hide()
+        userProfile.Visible = True
+    End Sub
+
+    Private Sub lblSignOut_Click(sender As Object, e As EventArgs) Handles lblSignOut.Click
+        PubVar = ""
+        Me.Close()
+        Login.Show()
+        Login.txtID.Clear()
+        Login.txtPass.Clear()
+    End Sub
 End Class

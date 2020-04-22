@@ -25,8 +25,8 @@ Partial Class Movie
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Movie))
         Me.lblProfile = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblMovie = New System.Windows.Forms.Label()
+        Me.lblOverview = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -186,27 +186,27 @@ Partial Class Movie
         Me.lblProfile.Text = "Profile"
         Me.lblProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
-        '
-        Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 317)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(207, 86)
-        Me.Label2.TabIndex = 23
-        Me.Label2.Text = "Movie"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'lblMovie
         '
         Me.lblMovie.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblMovie.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMovie.Location = New System.Drawing.Point(3, 240)
+        Me.lblMovie.Location = New System.Drawing.Point(3, 317)
         Me.lblMovie.Name = "lblMovie"
         Me.lblMovie.Size = New System.Drawing.Size(207, 86)
-        Me.lblMovie.TabIndex = 22
-        Me.lblMovie.Text = "Overview"
+        Me.lblMovie.TabIndex = 23
+        Me.lblMovie.Text = "Movie"
         Me.lblMovie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblOverview
+        '
+        Me.lblOverview.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblOverview.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOverview.Location = New System.Drawing.Point(3, 240)
+        Me.lblOverview.Name = "lblOverview"
+        Me.lblOverview.Size = New System.Drawing.Size(207, 86)
+        Me.lblOverview.TabIndex = 22
+        Me.lblOverview.Text = "Overview"
+        Me.lblOverview.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblName
         '
@@ -242,8 +242,8 @@ Partial Class Movie
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.lblProfile)
         Me.Panel1.Controls.Add(Me.lblName)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.lblMovie)
+        Me.Panel1.Controls.Add(Me.lblOverview)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(213, 681)
@@ -1205,11 +1205,17 @@ Partial Class Movie
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Movie"
-        Me.Text = "Movie"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Astronomia"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.signOutLogo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1277,8 +1283,8 @@ Partial Class Movie
     Friend WithEvents movieLogo As PictureBox
     Friend WithEvents profileLogo As PictureBox
     Friend WithEvents lblProfile As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents lblMovie As Label
+    Friend WithEvents lblOverview As Label
     Friend WithEvents lblName As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Logo As PictureBox

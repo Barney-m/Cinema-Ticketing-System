@@ -82,6 +82,7 @@
     End Sub
 
     Private Sub btnRemoveStaff_Click(sender As Object, e As EventArgs) Handles btnRemoveStaff.Click
+        Me.Hide()
         removeStaff.Show(Me)
     End Sub
 
@@ -97,5 +98,9 @@
     Private Sub btnAddMovie_Click(sender As Object, e As EventArgs) Handles btnAddMovie.Click
         AddMovie.Show()
 
+    End Sub
+
+    Private Sub btnRemoveMovie_Click(sender As Object, e As EventArgs) Handles btnRemoveMovie.Click
+        RemoveMovie.Show()
     End Sub
 End Class
