@@ -276,13 +276,14 @@ Public Class Movie
     End Sub
 
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs)
-        Dim chosenFlag As Boolean = False
+        Dim chosenFlag As New Boolean
+        chosenFlag = False
 
-        If CType(sender, PictureBox).Image Is availableSeat And chosenFlag = True Then
+        If CType(sender, PictureBox).Image Is availableSeat And chosenFlag = False Then
             CType(sender, PictureBox).Image = defaultSeat
             seatCount -= 1
             choosenSeat.Remove(CType(sender, PictureBox).Name)
-            chosenFlag = False
+            chosenFlag = True
         ElseIf CType(sender, PictureBox).Image Is defaultSeat And chosenFlag = False Then
             CType(sender, PictureBox).Image = availableSeat
             seatCount += 1

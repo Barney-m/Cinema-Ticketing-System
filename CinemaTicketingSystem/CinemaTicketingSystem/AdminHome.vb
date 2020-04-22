@@ -103,4 +103,14 @@
     Private Sub btnRemoveMovie_Click(sender As Object, e As EventArgs) Handles btnRemoveMovie.Click
         RemoveMovie.Show()
     End Sub
+
+    Private Sub btnTicketPurchasementReport_Click(sender As Object, e As EventArgs) Handles btnTicketPurchasementReport.Click
+        Me.Hide()
+        TicketPurchasementReport.Visible = True
+    End Sub
+
+    Private Sub btnStaffRegisterReport_Click(sender As Object, e As EventArgs) Handles btnStaffRegisterReport.Click
+        Me.Hide()
+        staffRegistReport.Visible = True
+    End Sub
 End Class

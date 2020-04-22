@@ -2,7 +2,7 @@
 
 Public Class staffRegistReport
 
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\college material\vb assignment\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\khai xiang\Source\Repos\Barney-m\Cinema-Ticketing-System\CinemaTicketingSystem\CinemaTicketingSystem\AstronomiaDb (1).accdb")
     Dim cmd As OleDbCommand
     Dim day As Integer = 0
     Dim report As String = ""
@@ -30,8 +30,8 @@ Public Class staffRegistReport
         cmd = New OleDbCommand("
         SELECT *
         FROM Employees
-        WHERE (recruitedDate BETWEEN @p1 AND @p2)
-        ORDER BY [recruitedDate] ASC", conn)
+        WHERE (RecruitDate BETWEEN @p1 AND @p2)
+        ORDER BY [RecruitDate] ASC", conn)
 
         cmd.Parameters.AddWithValue("@p1", oDate)
         cmd.Parameters.AddWithValue("@p2", oDate2)
@@ -48,7 +48,7 @@ Public Class staffRegistReport
                 x.SubItems.Add(dr("Birth_Date"))
                 x.SubItems.Add(dr("Phone_No"))
                 x.SubItems.Add(dr("E-mail"))
-                x.SubItems.Add(dr("recruitedDate"))
+                x.SubItems.Add(dr("RecruitDate"))
                 ListView1.Items.Add(x)
             Loop
         Else
@@ -74,8 +74,8 @@ Public Class staffRegistReport
         cmd = New OleDbCommand("
         SELECT *
         FROM Employees
-        WHERE (recruitedDate BETWEEN @p1 AND @p2)
-        ORDER BY [recruitedDate] ASC", conn)
+        WHERE (RecruitDate BETWEEN @p1 AND @p2)
+        ORDER BY [RecruitDate] ASC", conn)
 
         cmd.Parameters.AddWithValue("@p1", oDate)
         cmd.Parameters.AddWithValue("@p2", oDate2)
@@ -92,7 +92,7 @@ Public Class staffRegistReport
                 x.SubItems.Add(dr("Birth_Date"))
                 x.SubItems.Add(dr("Phone_No"))
                 x.SubItems.Add(dr("E-mail"))
-                x.SubItems.Add(dr("recruitedDate"))
+                x.SubItems.Add(dr("RecruitDate"))
                 ListView1.Items.Add(x)
             Loop
         Else
@@ -115,8 +115,8 @@ Public Class staffRegistReport
         cmd = New OleDbCommand("
         SELECT *
         FROM Employees
-        WHERE recruitedDate = @p1
-        ORDER BY [recruitedDate] ASC", conn)
+        WHERE RecruitDate = @p1
+        ORDER BY [RecruitDate] ASC", conn)
 
         cmd.Parameters.AddWithValue("@p1", oDate)
 
@@ -133,7 +133,7 @@ Public Class staffRegistReport
                 x.SubItems.Add(dr("Birth_Date"))
                 x.SubItems.Add(dr("Phone_No"))
                 x.SubItems.Add(dr("E-mail"))
-                x.SubItems.Add(dr("recruitedDate"))
+                x.SubItems.Add(dr("RecruitDate"))
                 ListView1.Items.Add(x)
             Loop
         Else

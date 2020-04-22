@@ -178,6 +178,12 @@
     <Compile Include="staffRegistReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TicketPurchasementReport.Designer.vb">
+      <DependentUpon>TicketPurchasementReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TicketPurchasementReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="userProfile.Designer.vb">
       <DependentUpon>userProfile.vb</DependentUpon>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="staffRegistReport.resx">
       <DependentUpon>staffRegistReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketPurchasementReport.resx">
+      <DependentUpon>TicketPurchasementReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userProfile.resx">
       <DependentUpon>userProfile.vb</DependentUpon>

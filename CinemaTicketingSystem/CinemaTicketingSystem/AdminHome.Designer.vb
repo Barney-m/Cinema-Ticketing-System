@@ -28,11 +28,10 @@ Partial Class AdminHome
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnSignOut = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.btn = New System.Windows.Forms.Button()
+        Me.btnTicketPurchasementReport = New System.Windows.Forms.Button()
+        Me.btnStaffRegisterReport = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnModifyStaff = New System.Windows.Forms.Button()
         Me.btnRemoveStaff = New System.Windows.Forms.Button()
@@ -47,11 +46,12 @@ Partial Class AdminHome
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -90,21 +90,11 @@ Partial Class AdminHome
         Me.btnSignOut.Text = "Sign Out"
         Me.btnSignOut.UseVisualStyleBackColor = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(122, 82)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.btn)
+        Me.Panel2.Controls.Add(Me.btnTicketPurchasementReport)
+        Me.Panel2.Controls.Add(Me.btnStaffRegisterReport)
         Me.Panel2.Location = New System.Drawing.Point(240, 201)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 92)
@@ -126,37 +116,37 @@ Partial Class AdminHome
         Me.Button3.Text = "Report"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnTicketPurchasementReport
         '
-        Me.Button2.BackColor = System.Drawing.Color.Silver
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(0, 182)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(200, 92)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Report"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnTicketPurchasementReport.BackColor = System.Drawing.Color.Silver
+        Me.btnTicketPurchasementReport.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTicketPurchasementReport.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnTicketPurchasementReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
+        Me.btnTicketPurchasementReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
+        Me.btnTicketPurchasementReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTicketPurchasementReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTicketPurchasementReport.Location = New System.Drawing.Point(0, 182)
+        Me.btnTicketPurchasementReport.Name = "btnTicketPurchasementReport"
+        Me.btnTicketPurchasementReport.Size = New System.Drawing.Size(200, 92)
+        Me.btnTicketPurchasementReport.TabIndex = 4
+        Me.btnTicketPurchasementReport.Text = "Report"
+        Me.btnTicketPurchasementReport.UseVisualStyleBackColor = False
         '
-        'btn
+        'btnStaffRegisterReport
         '
-        Me.btn.BackColor = System.Drawing.Color.Silver
-        Me.btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
-        Me.btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
-        Me.btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
-        Me.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn.Location = New System.Drawing.Point(0, 91)
-        Me.btn.Name = "btn"
-        Me.btn.Size = New System.Drawing.Size(200, 92)
-        Me.btn.TabIndex = 1
-        Me.btn.Text = "Report"
-        Me.btn.UseVisualStyleBackColor = False
+        Me.btnStaffRegisterReport.BackColor = System.Drawing.Color.Silver
+        Me.btnStaffRegisterReport.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnStaffRegisterReport.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnStaffRegisterReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
+        Me.btnStaffRegisterReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray
+        Me.btnStaffRegisterReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStaffRegisterReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStaffRegisterReport.Location = New System.Drawing.Point(0, 91)
+        Me.btnStaffRegisterReport.Name = "btnStaffRegisterReport"
+        Me.btnStaffRegisterReport.Size = New System.Drawing.Size(200, 92)
+        Me.btnStaffRegisterReport.TabIndex = 1
+        Me.btnStaffRegisterReport.Text = "Report"
+        Me.btnStaffRegisterReport.UseVisualStyleBackColor = False
         '
         'Panel3
         '
@@ -343,6 +333,16 @@ Partial Class AdminHome
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Welcome, Admin"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(122, 82)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'AdminHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -363,10 +363,10 @@ Partial Class AdminHome
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Astronomia"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -381,8 +381,8 @@ Partial Class AdminHome
     Friend WithEvents Panel4 As Panel
     Friend WithEvents btnReport As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents btn As Button
+    Friend WithEvents btnTicketPurchasementReport As Button
+    Friend WithEvents btnStaffRegisterReport As Button
     Friend WithEvents btnModifyStaff As Button
     Friend WithEvents btnRemoveStaff As Button
     Friend WithEvents btnAddStaff As Button
