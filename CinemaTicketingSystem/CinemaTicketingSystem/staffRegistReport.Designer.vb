@@ -42,6 +42,7 @@ Partial Class staffRegistReport
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.cbYear = New System.Windows.Forms.ComboBox()
         Me.btnShow = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -223,12 +224,22 @@ Partial Class staffRegistReport
         Me.btnShow.Text = "Show"
         Me.btnShow.UseVisualStyleBackColor = True
         '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(12, 121)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(75, 23)
+        Me.btnBack.TabIndex = 15
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'staffRegistReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnShow)
         Me.Controls.Add(Me.cbYear)
         Me.Controls.Add(Me.ListView1)
@@ -276,4 +287,5 @@ Partial Class staffRegistReport
     Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents cbYear As ComboBox
     Friend WithEvents btnShow As Button
+    Friend WithEvents btnBack As Button
 End Class

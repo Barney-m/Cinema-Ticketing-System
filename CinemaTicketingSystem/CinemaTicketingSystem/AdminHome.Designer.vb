@@ -129,7 +129,7 @@ Partial Class AdminHome
         Me.btnTicketPurchasementReport.Name = "btnTicketPurchasementReport"
         Me.btnTicketPurchasementReport.Size = New System.Drawing.Size(200, 92)
         Me.btnTicketPurchasementReport.TabIndex = 4
-        Me.btnTicketPurchasementReport.Text = "Report"
+        Me.btnTicketPurchasementReport.Text = "Ticket Purchasement"
         Me.btnTicketPurchasementReport.UseVisualStyleBackColor = False
         '
         'btnStaffRegisterReport
@@ -145,7 +145,7 @@ Partial Class AdminHome
         Me.btnStaffRegisterReport.Name = "btnStaffRegisterReport"
         Me.btnStaffRegisterReport.Size = New System.Drawing.Size(200, 92)
         Me.btnStaffRegisterReport.TabIndex = 1
-        Me.btnStaffRegisterReport.Text = "Report"
+        Me.btnStaffRegisterReport.Text = "Staff Registration"
         Me.btnStaffRegisterReport.UseVisualStyleBackColor = False
         '
         'Panel3

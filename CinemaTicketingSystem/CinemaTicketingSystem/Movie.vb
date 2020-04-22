@@ -22,6 +22,25 @@ Public Class Movie
     Dim unavailableSeat As New System.Drawing.Bitmap(My.Resources.seatunavailable)
 
     Private Sub Movie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conn.Open()
+        Dim sSql As String = "SELECT * FROM EMPLOYEES WHERE EmployeeID ='" & PubVar & "';"
+        Dim cmd As OleDbCommand = New OleDbCommand(sSql, conn)
+        Dim dr As OleDbDataReader = cmd.ExecuteReader
+        If dr.HasRows Then
+            Dim User As String = ""
+            While dr.Read
+                User = dr("Full_Name").ToString
+
+            End While
+            lblName.Text = User
+
+
+
+        End If
+
+
+
+        conn.Close()
         MovieListView.View = View.LargeIcon
         MovieListView.SelectedItems.Clear()
         MovieListView.SelectedIndices.Clear()
@@ -376,7 +395,7 @@ Public Class Movie
             cmd.Connection = conn
             cmd.Parameters.AddWithValue("@p1", ticketID)
             cmd.Parameters.AddWithValue("@p2", total)
-            cmd.Parameters.AddWithValue("@p3", "S1000001")
+            cmd.Parameters.AddWithValue("@p3", PubVar)
             cmd.Parameters.AddWithValue("@p4", scheduleID)
             cmd.Parameters.AddWithValue("@p5", String.Format("{0:M/d/yyyy}", DateTime.Now))
             cmd.Parameters.AddWithValue("@p6", "Paid")
@@ -426,5 +445,9 @@ Public Class Movie
     Private Sub profileLogo_Click(sender As Object, e As EventArgs) Handles profileLogo.Click
         Me.Hide()
         userProfile.Visible = True
+    End Sub
+
+    Private Sub panelOrder_Paint(sender As Object, e As PaintEventArgs) Handles panelOrder.Paint
+
     End Sub
 End Class
