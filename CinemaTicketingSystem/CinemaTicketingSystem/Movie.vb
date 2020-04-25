@@ -248,13 +248,7 @@ Public Class Movie
         btnNext1.Visible = True
     End Sub
 
-    Private Sub backLogo2_Click(sender As Object, e As EventArgs) Handles backLogo2.Click
-        Me.Close()
-        Redirect.Show()
 
-
-
-    End Sub
 
     Private Sub backLogo3_Click(sender As Object, e As EventArgs)
         panelOrder.Visible = False
@@ -364,12 +358,41 @@ Public Class Movie
 
     End Sub
 
-    Private Sub backLogo3_Click_1(sender As Object, e As EventArgs) Handles backLogo3.Click
+
+    Private Sub lblOverview_Click(sender As Object, e As EventArgs) Handles lblOverview.Click
+        Me.Hide()
+        Home.Visible = True
+    End Sub
+
+    Private Sub overviewLogo_Click(sender As Object, e As EventArgs) Handles overviewLogo.Click
+        Me.Hide()
+        Home.Visible = True
+    End Sub
+
+    Private Sub lblProfile_Click(sender As Object, e As EventArgs) Handles lblProfile.Click
+        Me.Hide()
+        userProfile.Visible = True
+    End Sub
+
+    Private Sub profileLogo_Click(sender As Object, e As EventArgs) Handles profileLogo.Click
+        Me.Hide()
+        userProfile.Visible = True
+    End Sub
+
+    Private Sub panelOrder_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        Redirect.Show()
+    End Sub
+
+    Private Sub backLogo3_Click_2(sender As Object, e As EventArgs) Handles backLogo3.Click
         panelOrder.Visible = False
     End Sub
 
-    Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
-
+    Private Sub btnOrder_Click_1(sender As Object, e As EventArgs) Handles btnOrder.Click
         Try
             For Each seat In choosenSeat
                 Dim cmd As New OleDbCommand
@@ -421,33 +444,5 @@ Public Class Movie
 
         Me.Close()
         Redirect.Show()
-
-
-
-
-    End Sub
-
-    Private Sub lblOverview_Click(sender As Object, e As EventArgs) Handles lblOverview.Click
-        Me.Hide()
-        Home.Visible = True
-    End Sub
-
-    Private Sub overviewLogo_Click(sender As Object, e As EventArgs) Handles overviewLogo.Click
-        Me.Hide()
-        Home.Visible = True
-    End Sub
-
-    Private Sub lblProfile_Click(sender As Object, e As EventArgs) Handles lblProfile.Click
-        Me.Hide()
-        userProfile.Visible = True
-    End Sub
-
-    Private Sub profileLogo_Click(sender As Object, e As EventArgs) Handles profileLogo.Click
-        Me.Hide()
-        userProfile.Visible = True
-    End Sub
-
-    Private Sub panelOrder_Paint(sender As Object, e As PaintEventArgs) Handles panelOrder.Paint
-
     End Sub
 End Class

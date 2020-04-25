@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AddMovie
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class AddMovie
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddMovie))
         Me.MovieIMG = New System.Windows.Forms.PictureBox()
@@ -29,7 +29,6 @@ Partial Class AddMovie
         Me.TextLength = New System.Windows.Forms.TextBox()
         Me.TextGenre = New System.Windows.Forms.TextBox()
         Me.TextRating = New System.Windows.Forms.TextBox()
-        Me.TextStatus = New System.Windows.Forms.TextBox()
         Me.TextDesc = New System.Windows.Forms.TextBox()
         Me.LabelID = New System.Windows.Forms.Label()
         Me.LabelName = New System.Windows.Forms.Label()
@@ -40,6 +39,17 @@ Partial Class AddMovie
         Me.LabelDesc = New System.Windows.Forms.Label()
         Me.ChooseIMG = New System.Windows.Forms.Button()
         Me.AddIMG = New System.Windows.Forms.Button()
+        Me.CheckStatus = New System.Windows.Forms.CheckBox()
+        Me.DTSchedule1 = New System.Windows.Forms.DateTimePicker()
+        Me.sid1 = New System.Windows.Forms.TextBox()
+        Me.stime1 = New System.Windows.Forms.TextBox()
+        Me.hid1 = New System.Windows.Forms.TextBox()
+        Me.scheduleID = New System.Windows.Forms.Label()
+        Me.hallID = New System.Windows.Forms.Label()
+        Me.time = New System.Windows.Forms.Label()
+        Me.scheduleDate = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.MovieIMG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,8 +65,11 @@ Partial Class AddMovie
         '
         'TextID
         '
+        Me.TextID.Enabled = False
+        Me.TextID.ForeColor = System.Drawing.SystemColors.InactiveCaption
         Me.TextID.Location = New System.Drawing.Point(361, 85)
         Me.TextID.Name = "TextID"
+        Me.TextID.ReadOnly = True
         Me.TextID.Size = New System.Drawing.Size(100, 20)
         Me.TextID.TabIndex = 1
         '
@@ -87,13 +100,6 @@ Partial Class AddMovie
         Me.TextRating.Name = "TextRating"
         Me.TextRating.Size = New System.Drawing.Size(100, 20)
         Me.TextRating.TabIndex = 5
-        '
-        'TextStatus
-        '
-        Me.TextStatus.Location = New System.Drawing.Point(546, 213)
-        Me.TextStatus.Name = "TextStatus"
-        Me.TextStatus.Size = New System.Drawing.Size(100, 20)
-        Me.TextStatus.TabIndex = 6
         '
         'TextDesc
         '
@@ -176,18 +182,129 @@ Partial Class AddMovie
         '
         'AddIMG
         '
-        Me.AddIMG.Location = New System.Drawing.Point(308, 354)
+        Me.AddIMG.Location = New System.Drawing.Point(561, 325)
         Me.AddIMG.Name = "AddIMG"
-        Me.AddIMG.Size = New System.Drawing.Size(174, 45)
+        Me.AddIMG.Size = New System.Drawing.Size(165, 97)
         Me.AddIMG.TabIndex = 16
         Me.AddIMG.Text = "ADD"
         Me.AddIMG.UseVisualStyleBackColor = True
+        '
+        'CheckStatus
+        '
+        Me.CheckStatus.AutoSize = True
+        Me.CheckStatus.Checked = True
+        Me.CheckStatus.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckStatus.Location = New System.Drawing.Point(575, 216)
+        Me.CheckStatus.Name = "CheckStatus"
+        Me.CheckStatus.Size = New System.Drawing.Size(40, 17)
+        Me.CheckStatus.TabIndex = 17
+        Me.CheckStatus.Text = "Up"
+        Me.CheckStatus.UseVisualStyleBackColor = True
+        '
+        'DTSchedule1
+        '
+        Me.DTSchedule1.Location = New System.Drawing.Point(156, 384)
+        Me.DTSchedule1.Name = "DTSchedule1"
+        Me.DTSchedule1.Size = New System.Drawing.Size(191, 20)
+        Me.DTSchedule1.TabIndex = 21
+        '
+        'sid1
+        '
+        Me.sid1.Enabled = False
+        Me.sid1.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.sid1.Location = New System.Drawing.Point(156, 345)
+        Me.sid1.Name = "sid1"
+        Me.sid1.ReadOnly = True
+        Me.sid1.Size = New System.Drawing.Size(138, 20)
+        Me.sid1.TabIndex = 22
+        '
+        'stime1
+        '
+        Me.stime1.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.stime1.Location = New System.Drawing.Point(420, 386)
+        Me.stime1.Name = "stime1"
+        Me.stime1.Size = New System.Drawing.Size(117, 20)
+        Me.stime1.TabIndex = 23
+        '
+        'hid1
+        '
+        Me.hid1.Location = New System.Drawing.Point(420, 348)
+        Me.hid1.Name = "hid1"
+        Me.hid1.Size = New System.Drawing.Size(54, 20)
+        Me.hid1.TabIndex = 24
+        '
+        'scheduleID
+        '
+        Me.scheduleID.AutoSize = True
+        Me.scheduleID.Location = New System.Drawing.Point(84, 351)
+        Me.scheduleID.Name = "scheduleID"
+        Me.scheduleID.Size = New System.Drawing.Size(66, 13)
+        Me.scheduleID.TabIndex = 25
+        Me.scheduleID.Text = "Schedule ID"
+        '
+        'hallID
+        '
+        Me.hallID.AutoSize = True
+        Me.hallID.Location = New System.Drawing.Point(375, 352)
+        Me.hallID.Name = "hallID"
+        Me.hallID.Size = New System.Drawing.Size(39, 13)
+        Me.hallID.TabIndex = 26
+        Me.hallID.Text = "Hall ID"
+        '
+        'time
+        '
+        Me.time.AutoSize = True
+        Me.time.Location = New System.Drawing.Point(384, 390)
+        Me.time.Name = "time"
+        Me.time.Size = New System.Drawing.Size(30, 13)
+        Me.time.TabIndex = 27
+        Me.time.Text = "Time"
+        '
+        'scheduleDate
+        '
+        Me.scheduleDate.AutoSize = True
+        Me.scheduleDate.Location = New System.Drawing.Point(115, 386)
+        Me.scheduleDate.Name = "scheduleDate"
+        Me.scheduleDate.Size = New System.Drawing.Size(30, 13)
+        Me.scheduleDate.TabIndex = 28
+        Me.scheduleDate.Text = "Date"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(397, 409)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(143, 13)
+        Me.Label1.TabIndex = 29
+        Me.Label1.Text = "*With 24hours Format: hhmm"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(480, 351)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(25, 13)
+        Me.Label2.TabIndex = 30
+        Me.Label2.Text = "*H?"
         '
         'AddMovie
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.scheduleDate)
+        Me.Controls.Add(Me.time)
+        Me.Controls.Add(Me.hallID)
+        Me.Controls.Add(Me.scheduleID)
+        Me.Controls.Add(Me.hid1)
+        Me.Controls.Add(Me.stime1)
+        Me.Controls.Add(Me.sid1)
+        Me.Controls.Add(Me.DTSchedule1)
+        Me.Controls.Add(Me.CheckStatus)
         Me.Controls.Add(Me.AddIMG)
         Me.Controls.Add(Me.ChooseIMG)
         Me.Controls.Add(Me.LabelDesc)
@@ -198,13 +315,13 @@ Partial Class AddMovie
         Me.Controls.Add(Me.LabelName)
         Me.Controls.Add(Me.LabelID)
         Me.Controls.Add(Me.TextDesc)
-        Me.Controls.Add(Me.TextStatus)
         Me.Controls.Add(Me.TextRating)
         Me.Controls.Add(Me.TextGenre)
         Me.Controls.Add(Me.TextLength)
         Me.Controls.Add(Me.TextName)
         Me.Controls.Add(Me.TextID)
         Me.Controls.Add(Me.MovieIMG)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -224,7 +341,6 @@ Partial Class AddMovie
     Friend WithEvents TextLength As TextBox
     Friend WithEvents TextGenre As TextBox
     Friend WithEvents TextRating As TextBox
-    Friend WithEvents TextStatus As TextBox
     Friend WithEvents TextDesc As TextBox
     Friend WithEvents LabelID As Label
     Friend WithEvents LabelName As Label
@@ -235,4 +351,15 @@ Partial Class AddMovie
     Friend WithEvents LabelDesc As Label
     Friend WithEvents ChooseIMG As Button
     Friend WithEvents AddIMG As Button
+    Friend WithEvents CheckStatus As CheckBox
+    Friend WithEvents DTSchedule1 As DateTimePicker
+    Friend WithEvents sid1 As TextBox
+    Friend WithEvents stime1 As TextBox
+    Friend WithEvents hid1 As TextBox
+    Friend WithEvents scheduleID As Label
+    Friend WithEvents hallID As Label
+    Friend WithEvents time As Label
+    Friend WithEvents scheduleDate As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

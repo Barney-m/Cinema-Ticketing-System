@@ -32,58 +32,21 @@ Partial Class Movie
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.signOutLogo = New System.Windows.Forms.PictureBox()
+        Me.overviewLogo = New System.Windows.Forms.PictureBox()
         Me.lblSignOut = New System.Windows.Forms.Label()
+        Me.movieLogo = New System.Windows.Forms.PictureBox()
+        Me.Logo = New System.Windows.Forms.PictureBox()
+        Me.profileLogo = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnNext1 = New System.Windows.Forms.Button()
         Me.MovieDetailsPanel = New System.Windows.Forms.Panel()
         Me.panelHall = New System.Windows.Forms.Panel()
-        Me.panelOrder = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.btnOrder = New System.Windows.Forms.Button()
-        Me.lblSeat = New System.Windows.Forms.Label()
-        Me.lblPrice = New System.Windows.Forms.Label()
-        Me.lblPax = New System.Windows.Forms.Label()
-        Me.lblMovieName = New System.Windows.Forms.Label()
-        Me.lblTicketID = New System.Windows.Forms.Label()
-        Me.lblHall = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label27 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnConfirm = New System.Windows.Forms.Button()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.MovieDetailsContainer = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.btnNext = New System.Windows.Forms.Button()
-        Me.MovieDetailsBar = New System.Windows.Forms.Panel()
-        Me.movieName = New System.Windows.Forms.Label()
-        Me.MovieListView = New System.Windows.Forms.ListView()
-        Me.MovieImg = New System.Windows.Forms.ImageList(Me.components)
-        Me._AstronomiaDb__1_DataSet = New CinemaTicketingSystem._AstronomiaDb__1_DataSet()
-        Me.AstronomiaDb1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.backLogo3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox30 = New System.Windows.Forms.PictureBox()
         Me.PictureBox29 = New System.Windows.Forms.PictureBox()
         Me.PictureBox28 = New System.Windows.Forms.PictureBox()
@@ -114,28 +77,61 @@ Partial Class Movie
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.backLogo2 = New System.Windows.Forms.PictureBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.MovieDetailsContainer = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.MovieDetailsBar = New System.Windows.Forms.Panel()
+        Me.movieName = New System.Windows.Forms.Label()
         Me.backLogo1 = New System.Windows.Forms.PictureBox()
-        Me.signOutLogo = New System.Windows.Forms.PictureBox()
-        Me.overviewLogo = New System.Windows.Forms.PictureBox()
-        Me.movieLogo = New System.Windows.Forms.PictureBox()
-        Me.Logo = New System.Windows.Forms.PictureBox()
-        Me.profileLogo = New System.Windows.Forms.PictureBox()
+        Me.MovieListView = New System.Windows.Forms.ListView()
+        Me.MovieImg = New System.Windows.Forms.ImageList(Me.components)
+        Me._AstronomiaDb__1_DataSet = New CinemaTicketingSystem._AstronomiaDb__1_DataSet()
+        Me.AstronomiaDb1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.panelOrder = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.btnOrder = New System.Windows.Forms.Button()
+        Me.lblSeat = New System.Windows.Forms.Label()
+        Me.lblPrice = New System.Windows.Forms.Label()
+        Me.lblPax = New System.Windows.Forms.Label()
+        Me.lblMovieName = New System.Windows.Forms.Label()
+        Me.lblTicketID = New System.Windows.Forms.Label()
+        Me.lblHall = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.backLogo3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.signOutLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.overviewLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.movieLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.profileLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.MovieDetailsPanel.SuspendLayout()
         Me.panelHall.SuspendLayout()
-        Me.panelOrder.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        Me.Panel10.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.MovieDetailsContainer.SuspendLayout()
-        Me.MovieDetailsBar.SuspendLayout()
-        CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AstronomiaDb1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.backLogo3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -166,13 +162,16 @@ Partial Class Movie
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.backLogo2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
+        Me.MovieDetailsContainer.SuspendLayout()
+        Me.MovieDetailsBar.SuspendLayout()
         CType(Me.backLogo1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.signOutLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.overviewLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.movieLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.profileLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AstronomiaDb1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelOrder.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        CType(Me.backLogo3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblProfile
@@ -263,6 +262,28 @@ Partial Class Movie
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1051, 581)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
+        'signOutLogo
+        '
+        Me.signOutLogo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.signOutLogo.Image = CType(resources.GetObject("signOutLogo.Image"), System.Drawing.Image)
+        Me.signOutLogo.Location = New System.Drawing.Point(8, 613)
+        Me.signOutLogo.Name = "signOutLogo"
+        Me.signOutLogo.Size = New System.Drawing.Size(51, 53)
+        Me.signOutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.signOutLogo.TabIndex = 16
+        Me.signOutLogo.TabStop = False
+        '
+        'overviewLogo
+        '
+        Me.overviewLogo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.overviewLogo.Image = CType(resources.GetObject("overviewLogo.Image"), System.Drawing.Image)
+        Me.overviewLogo.Location = New System.Drawing.Point(8, 252)
+        Me.overviewLogo.Name = "overviewLogo"
+        Me.overviewLogo.Size = New System.Drawing.Size(51, 53)
+        Me.overviewLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.overviewLogo.TabIndex = 27
+        Me.overviewLogo.TabStop = False
+        '
         'lblSignOut
         '
         Me.lblSignOut.Cursor = System.Windows.Forms.Cursors.Hand
@@ -273,6 +294,38 @@ Partial Class Movie
         Me.lblSignOut.TabIndex = 14
         Me.lblSignOut.Text = "Sign Out"
         Me.lblSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'movieLogo
+        '
+        Me.movieLogo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.movieLogo.Image = CType(resources.GetObject("movieLogo.Image"), System.Drawing.Image)
+        Me.movieLogo.Location = New System.Drawing.Point(8, 333)
+        Me.movieLogo.Name = "movieLogo"
+        Me.movieLogo.Size = New System.Drawing.Size(51, 53)
+        Me.movieLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.movieLogo.TabIndex = 26
+        Me.movieLogo.TabStop = False
+        '
+        'Logo
+        '
+        Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
+        Me.Logo.Location = New System.Drawing.Point(0, 0)
+        Me.Logo.Name = "Logo"
+        Me.Logo.Size = New System.Drawing.Size(213, 139)
+        Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Logo.TabIndex = 19
+        Me.Logo.TabStop = False
+        '
+        'profileLogo
+        '
+        Me.profileLogo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.profileLogo.Image = CType(resources.GetObject("profileLogo.Image"), System.Drawing.Image)
+        Me.profileLogo.Location = New System.Drawing.Point(8, 427)
+        Me.profileLogo.Name = "profileLogo"
+        Me.profileLogo.Size = New System.Drawing.Size(51, 53)
+        Me.profileLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.profileLogo.TabIndex = 25
+        Me.profileLogo.TabStop = False
         '
         'Panel2
         '
@@ -331,7 +384,6 @@ Partial Class Movie
         '
         'panelHall
         '
-        Me.panelHall.Controls.Add(Me.panelOrder)
         Me.panelHall.Controls.Add(Me.Panel5)
         Me.panelHall.Controls.Add(Me.Panel6)
         Me.panelHall.Location = New System.Drawing.Point(0, -1)
@@ -340,205 +392,10 @@ Partial Class Movie
         Me.panelHall.TabIndex = 2
         Me.panelHall.Visible = False
         '
-        'panelOrder
-        '
-        Me.panelOrder.Controls.Add(Me.Panel8)
-        Me.panelOrder.Controls.Add(Me.Panel10)
-        Me.panelOrder.Location = New System.Drawing.Point(-1, 0)
-        Me.panelOrder.Name = "panelOrder"
-        Me.panelOrder.Size = New System.Drawing.Size(1051, 581)
-        Me.panelOrder.TabIndex = 4
-        Me.panelOrder.Visible = False
-        '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel8.Controls.Add(Me.btnOrder)
-        Me.Panel8.Controls.Add(Me.lblSeat)
-        Me.Panel8.Controls.Add(Me.lblPrice)
-        Me.Panel8.Controls.Add(Me.lblPax)
-        Me.Panel8.Controls.Add(Me.lblMovieName)
-        Me.Panel8.Controls.Add(Me.lblTicketID)
-        Me.Panel8.Controls.Add(Me.lblHall)
-        Me.Panel8.Controls.Add(Me.Label22)
-        Me.Panel8.Controls.Add(Me.Label21)
-        Me.Panel8.Controls.Add(Me.Label20)
-        Me.Panel8.Controls.Add(Me.Label19)
-        Me.Panel8.Controls.Add(Me.Label18)
-        Me.Panel8.Controls.Add(Me.Label17)
-        Me.Panel8.Controls.Add(Me.Label16)
-        Me.Panel8.Location = New System.Drawing.Point(25, 65)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(1001, 483)
-        Me.Panel8.TabIndex = 1
-        '
-        'btnOrder
-        '
-        Me.btnOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOrder.Location = New System.Drawing.Point(442, 355)
-        Me.btnOrder.Name = "btnOrder"
-        Me.btnOrder.Size = New System.Drawing.Size(131, 55)
-        Me.btnOrder.TabIndex = 13
-        Me.btnOrder.Text = "Confirm"
-        Me.btnOrder.UseVisualStyleBackColor = True
-        '
-        'lblSeat
-        '
-        Me.lblSeat.AutoSize = True
-        Me.lblSeat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSeat.Location = New System.Drawing.Point(704, 244)
-        Me.lblSeat.Name = "lblSeat"
-        Me.lblSeat.Size = New System.Drawing.Size(73, 20)
-        Me.lblSeat.TabIndex = 12
-        Me.lblSeat.Text = "Label23"
-        '
-        'lblPrice
-        '
-        Me.lblPrice.AutoSize = True
-        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrice.ForeColor = System.Drawing.Color.Green
-        Me.lblPrice.Location = New System.Drawing.Point(482, 233)
-        Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(66, 20)
-        Me.lblPrice.TabIndex = 11
-        Me.lblPrice.Text = "Label24"
-        '
-        'lblPax
-        '
-        Me.lblPax.AutoSize = True
-        Me.lblPax.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPax.ForeColor = System.Drawing.Color.Green
-        Me.lblPax.Location = New System.Drawing.Point(482, 193)
-        Me.lblPax.Name = "lblPax"
-        Me.lblPax.Size = New System.Drawing.Size(66, 20)
-        Me.lblPax.TabIndex = 10
-        Me.lblPax.Text = "Label24"
-        '
-        'lblMovieName
-        '
-        Me.lblMovieName.AutoSize = True
-        Me.lblMovieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMovieName.ForeColor = System.Drawing.Color.Green
-        Me.lblMovieName.Location = New System.Drawing.Point(481, 154)
-        Me.lblMovieName.Name = "lblMovieName"
-        Me.lblMovieName.Size = New System.Drawing.Size(66, 20)
-        Me.lblMovieName.TabIndex = 9
-        Me.lblMovieName.Text = "Label24"
-        '
-        'lblTicketID
-        '
-        Me.lblTicketID.AutoSize = True
-        Me.lblTicketID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTicketID.ForeColor = System.Drawing.Color.Green
-        Me.lblTicketID.Location = New System.Drawing.Point(481, 117)
-        Me.lblTicketID.Name = "lblTicketID"
-        Me.lblTicketID.Size = New System.Drawing.Size(66, 20)
-        Me.lblTicketID.TabIndex = 8
-        Me.lblTicketID.Text = "Label24"
-        '
-        'lblHall
-        '
-        Me.lblHall.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHall.Location = New System.Drawing.Point(702, 104)
-        Me.lblHall.Name = "lblHall"
-        Me.lblHall.Size = New System.Drawing.Size(61, 59)
-        Me.lblHall.TabIndex = 7
-        Me.lblHall.Text = "1"
-        Me.lblHall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label22
-        '
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(698, 211)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(75, 28)
-        Me.Label22.TabIndex = 6
-        Me.Label22.Text = "Seat No:"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label21
-        '
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(698, 76)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(75, 28)
-        Me.Label21.TabIndex = 5
-        Me.Label21.Text = "Hall"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label20
-        '
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(352, 229)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(124, 28)
-        Me.Label20.TabIndex = 4
-        Me.Label20.Text = "Price                   :"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label19
-        '
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(353, 189)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(123, 28)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "Pax                     :"
-        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label18
-        '
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(348, 150)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(132, 28)
-        Me.Label18.TabIndex = 2
-        Me.Label18.Text = "Movie Name      :"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label17
-        '
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(352, 113)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(123, 28)
-        Me.Label17.TabIndex = 1
-        Me.Label17.Text = "Ticket ID             :"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(412, 43)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(187, 31)
-        Me.Label16.TabIndex = 0
-        Me.Label16.Text = "Order Details"
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.Color.DarkGray
-        Me.Panel10.Controls.Add(Me.Label27)
-        Me.Panel10.Controls.Add(Me.backLogo3)
-        Me.Panel10.Location = New System.Drawing.Point(0, 0)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(1051, 39)
-        Me.Panel10.TabIndex = 0
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(65, 4)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(175, 31)
-        Me.Label27.TabIndex = 1
-        Me.Label27.Text = "Movie Name"
-        '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Controls.Add(Me.Button1)
         Me.Panel5.Controls.Add(Me.btnConfirm)
         Me.Panel5.Controls.Add(Me.PictureBox30)
         Me.Panel5.Controls.Add(Me.PictureBox29)
@@ -587,6 +444,20 @@ Partial Class Movie
         Me.Panel5.Size = New System.Drawing.Size(1001, 483)
         Me.Panel5.TabIndex = 1
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(814, 420)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(99, 41)
+        Me.Button1.TabIndex = 74
+        Me.Button1.Text = "Cancel"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'btnConfirm
         '
         Me.btnConfirm.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -594,235 +465,12 @@ Partial Class Movie
         Me.btnConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConfirm.Location = New System.Drawing.Point(808, 420)
+        Me.btnConfirm.Location = New System.Drawing.Point(700, 420)
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.Size = New System.Drawing.Size(99, 41)
         Me.btnConfirm.TabIndex = 73
         Me.btnConfirm.Text = "Confirm"
         Me.btnConfirm.UseVisualStyleBackColor = True
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(325, 34)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(14, 13)
-        Me.Label15.TabIndex = 41
-        Me.Label15.Text = "E"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(325, 116)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(15, 13)
-        Me.Label14.TabIndex = 40
-        Me.Label14.Text = "D"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(325, 174)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(14, 13)
-        Me.Label13.TabIndex = 39
-        Me.Label13.Text = "C"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(325, 321)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(14, 13)
-        Me.Label12.TabIndex = 20
-        Me.Label12.Text = "A"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(325, 248)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(14, 13)
-        Me.Label11.TabIndex = 19
-        Me.Label11.Text = "B"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(572, 6)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(13, 13)
-        Me.Label10.TabIndex = 18
-        Me.Label10.Text = "6"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(535, 6)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(13, 13)
-        Me.Label9.TabIndex = 17
-        Me.Label9.Text = "5"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(494, 6)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(13, 13)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "4"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(455, 6)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(13, 13)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "3"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(414, 6)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(13, 13)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "2"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(373, 6)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(13, 13)
-        Me.Label3.TabIndex = 13
-        Me.Label3.Text = "1"
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.DimGray
-        Me.Panel7.Location = New System.Drawing.Point(363, 380)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(241, 64)
-        Me.Panel7.TabIndex = 12
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.DarkGray
-        Me.Panel6.Controls.Add(Me.Label5)
-        Me.Panel6.Controls.Add(Me.backLogo2)
-        Me.Panel6.Location = New System.Drawing.Point(0, 0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1051, 39)
-        Me.Panel6.TabIndex = 0
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(65, 4)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(175, 31)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Movie Name"
-        '
-        'MovieDetailsContainer
-        '
-        Me.MovieDetailsContainer.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MovieDetailsContainer.Controls.Add(Me.Label4)
-        Me.MovieDetailsContainer.Controls.Add(Me.ComboBox1)
-        Me.MovieDetailsContainer.Controls.Add(Me.btnNext)
-        Me.MovieDetailsContainer.Location = New System.Drawing.Point(25, 65)
-        Me.MovieDetailsContainer.Name = "MovieDetailsContainer"
-        Me.MovieDetailsContainer.Size = New System.Drawing.Size(1001, 483)
-        Me.MovieDetailsContainer.TabIndex = 1
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(443, 152)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(132, 34)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Select a time:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(413, 189)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(191, 21)
-        Me.ComboBox1.TabIndex = 7
-        '
-        'btnNext
-        '
-        Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNext.Location = New System.Drawing.Point(428, 379)
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(157, 65)
-        Me.btnNext.TabIndex = 6
-        Me.btnNext.Text = "Next"
-        Me.btnNext.UseVisualStyleBackColor = True
-        '
-        'MovieDetailsBar
-        '
-        Me.MovieDetailsBar.BackColor = System.Drawing.Color.DarkGray
-        Me.MovieDetailsBar.Controls.Add(Me.movieName)
-        Me.MovieDetailsBar.Controls.Add(Me.backLogo1)
-        Me.MovieDetailsBar.Location = New System.Drawing.Point(0, 0)
-        Me.MovieDetailsBar.Name = "MovieDetailsBar"
-        Me.MovieDetailsBar.Size = New System.Drawing.Size(1051, 39)
-        Me.MovieDetailsBar.TabIndex = 0
-        '
-        'movieName
-        '
-        Me.movieName.AutoSize = True
-        Me.movieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.movieName.Location = New System.Drawing.Point(65, 4)
-        Me.movieName.Name = "movieName"
-        Me.movieName.Size = New System.Drawing.Size(175, 31)
-        Me.movieName.TabIndex = 1
-        Me.movieName.Text = "Movie Name"
-        '
-        'MovieListView
-        '
-        Me.MovieListView.BackColor = System.Drawing.Color.Silver
-        Me.MovieListView.HideSelection = False
-        Me.MovieListView.LargeImageList = Me.MovieImg
-        Me.MovieListView.Location = New System.Drawing.Point(0, 35)
-        Me.MovieListView.Name = "MovieListView"
-        Me.MovieListView.Size = New System.Drawing.Size(1051, 546)
-        Me.MovieListView.TabIndex = 0
-        Me.MovieListView.UseCompatibleStateImageBehavior = False
-        '
-        'MovieImg
-        '
-        Me.MovieImg.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        Me.MovieImg.ImageSize = New System.Drawing.Size(16, 16)
-        Me.MovieImg.TransparentColor = System.Drawing.Color.Transparent
-        '
-        '_AstronomiaDb__1_DataSet
-        '
-        Me._AstronomiaDb__1_DataSet.DataSetName = "_AstronomiaDb__1_DataSet"
-        Me._AstronomiaDb__1_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AstronomiaDb1DataSetBindingSource
-        '
-        Me.AstronomiaDb1DataSetBindingSource.DataSource = Me._AstronomiaDb__1_DataSet
-        Me.AstronomiaDb1DataSetBindingSource.Position = 0
-        '
-        'backLogo3
-        '
-        Me.backLogo3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.backLogo3.Image = CType(resources.GetObject("backLogo3.Image"), System.Drawing.Image)
-        Me.backLogo3.Location = New System.Drawing.Point(6, 3)
-        Me.backLogo3.Name = "backLogo3"
-        Me.backLogo3.Size = New System.Drawing.Size(53, 33)
-        Me.backLogo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.backLogo3.TabIndex = 0
-        Me.backLogo3.TabStop = False
         '
         'PictureBox30
         '
@@ -1124,16 +772,189 @@ Partial Class Movie
         Me.PictureBox1.TabIndex = 43
         Me.PictureBox1.TabStop = False
         '
-        'backLogo2
+        'Label15
         '
-        Me.backLogo2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.backLogo2.Image = CType(resources.GetObject("backLogo2.Image"), System.Drawing.Image)
-        Me.backLogo2.Location = New System.Drawing.Point(6, 3)
-        Me.backLogo2.Name = "backLogo2"
-        Me.backLogo2.Size = New System.Drawing.Size(53, 33)
-        Me.backLogo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.backLogo2.TabIndex = 0
-        Me.backLogo2.TabStop = False
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(325, 34)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(14, 13)
+        Me.Label15.TabIndex = 41
+        Me.Label15.Text = "E"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(325, 116)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(15, 13)
+        Me.Label14.TabIndex = 40
+        Me.Label14.Text = "D"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(325, 174)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(14, 13)
+        Me.Label13.TabIndex = 39
+        Me.Label13.Text = "C"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(325, 321)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(14, 13)
+        Me.Label12.TabIndex = 20
+        Me.Label12.Text = "A"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(325, 248)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(14, 13)
+        Me.Label11.TabIndex = 19
+        Me.Label11.Text = "B"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(572, 6)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(13, 13)
+        Me.Label10.TabIndex = 18
+        Me.Label10.Text = "6"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(535, 6)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(13, 13)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "5"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(494, 6)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(13, 13)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "4"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(455, 6)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(13, 13)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "3"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(414, 6)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(13, 13)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "2"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(373, 6)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(13, 13)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "1"
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.DimGray
+        Me.Panel7.Location = New System.Drawing.Point(363, 380)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(241, 64)
+        Me.Panel7.TabIndex = 12
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.DarkGray
+        Me.Panel6.Controls.Add(Me.Label5)
+        Me.Panel6.Location = New System.Drawing.Point(0, 0)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(1051, 39)
+        Me.Panel6.TabIndex = 0
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(65, 4)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(175, 31)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Movie Name"
+        '
+        'MovieDetailsContainer
+        '
+        Me.MovieDetailsContainer.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.MovieDetailsContainer.Controls.Add(Me.Label4)
+        Me.MovieDetailsContainer.Controls.Add(Me.ComboBox1)
+        Me.MovieDetailsContainer.Controls.Add(Me.btnNext)
+        Me.MovieDetailsContainer.Location = New System.Drawing.Point(25, 65)
+        Me.MovieDetailsContainer.Name = "MovieDetailsContainer"
+        Me.MovieDetailsContainer.Size = New System.Drawing.Size(1001, 483)
+        Me.MovieDetailsContainer.TabIndex = 1
+        '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(443, 152)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(132, 34)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Select a time:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(413, 189)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(191, 21)
+        Me.ComboBox1.TabIndex = 7
+        '
+        'btnNext
+        '
+        Me.btnNext.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNext.Location = New System.Drawing.Point(428, 379)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(157, 65)
+        Me.btnNext.TabIndex = 6
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'MovieDetailsBar
+        '
+        Me.MovieDetailsBar.BackColor = System.Drawing.Color.DarkGray
+        Me.MovieDetailsBar.Controls.Add(Me.movieName)
+        Me.MovieDetailsBar.Controls.Add(Me.backLogo1)
+        Me.MovieDetailsBar.Location = New System.Drawing.Point(0, 0)
+        Me.MovieDetailsBar.Name = "MovieDetailsBar"
+        Me.MovieDetailsBar.Size = New System.Drawing.Size(1051, 39)
+        Me.MovieDetailsBar.TabIndex = 0
+        '
+        'movieName
+        '
+        Me.movieName.AutoSize = True
+        Me.movieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.movieName.Location = New System.Drawing.Point(65, 4)
+        Me.movieName.Name = "movieName"
+        Me.movieName.Size = New System.Drawing.Size(175, 31)
+        Me.movieName.TabIndex = 1
+        Me.movieName.Text = "Movie Name"
         '
         'backLogo1
         '
@@ -1146,59 +967,239 @@ Partial Class Movie
         Me.backLogo1.TabIndex = 0
         Me.backLogo1.TabStop = False
         '
-        'signOutLogo
+        'MovieListView
         '
-        Me.signOutLogo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.signOutLogo.Image = CType(resources.GetObject("signOutLogo.Image"), System.Drawing.Image)
-        Me.signOutLogo.Location = New System.Drawing.Point(8, 613)
-        Me.signOutLogo.Name = "signOutLogo"
-        Me.signOutLogo.Size = New System.Drawing.Size(51, 53)
-        Me.signOutLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.signOutLogo.TabIndex = 16
-        Me.signOutLogo.TabStop = False
+        Me.MovieListView.BackColor = System.Drawing.Color.Silver
+        Me.MovieListView.HideSelection = False
+        Me.MovieListView.LargeImageList = Me.MovieImg
+        Me.MovieListView.Location = New System.Drawing.Point(0, 35)
+        Me.MovieListView.Name = "MovieListView"
+        Me.MovieListView.Size = New System.Drawing.Size(1051, 546)
+        Me.MovieListView.TabIndex = 0
+        Me.MovieListView.UseCompatibleStateImageBehavior = False
         '
-        'overviewLogo
+        'MovieImg
         '
-        Me.overviewLogo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.overviewLogo.Image = CType(resources.GetObject("overviewLogo.Image"), System.Drawing.Image)
-        Me.overviewLogo.Location = New System.Drawing.Point(8, 252)
-        Me.overviewLogo.Name = "overviewLogo"
-        Me.overviewLogo.Size = New System.Drawing.Size(51, 53)
-        Me.overviewLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.overviewLogo.TabIndex = 27
-        Me.overviewLogo.TabStop = False
+        Me.MovieImg.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
+        Me.MovieImg.ImageSize = New System.Drawing.Size(16, 16)
+        Me.MovieImg.TransparentColor = System.Drawing.Color.Transparent
         '
-        'movieLogo
+        '_AstronomiaDb__1_DataSet
         '
-        Me.movieLogo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.movieLogo.Image = CType(resources.GetObject("movieLogo.Image"), System.Drawing.Image)
-        Me.movieLogo.Location = New System.Drawing.Point(8, 333)
-        Me.movieLogo.Name = "movieLogo"
-        Me.movieLogo.Size = New System.Drawing.Size(51, 53)
-        Me.movieLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.movieLogo.TabIndex = 26
-        Me.movieLogo.TabStop = False
+        Me._AstronomiaDb__1_DataSet.DataSetName = "_AstronomiaDb__1_DataSet"
+        Me._AstronomiaDb__1_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Logo
+        'AstronomiaDb1DataSetBindingSource
         '
-        Me.Logo.Image = CType(resources.GetObject("Logo.Image"), System.Drawing.Image)
-        Me.Logo.Location = New System.Drawing.Point(0, 0)
-        Me.Logo.Name = "Logo"
-        Me.Logo.Size = New System.Drawing.Size(213, 139)
-        Me.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Logo.TabIndex = 19
-        Me.Logo.TabStop = False
+        Me.AstronomiaDb1DataSetBindingSource.DataSource = Me._AstronomiaDb__1_DataSet
+        Me.AstronomiaDb1DataSetBindingSource.Position = 0
         '
-        'profileLogo
+        'panelOrder
         '
-        Me.profileLogo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.profileLogo.Image = CType(resources.GetObject("profileLogo.Image"), System.Drawing.Image)
-        Me.profileLogo.Location = New System.Drawing.Point(8, 427)
-        Me.profileLogo.Name = "profileLogo"
-        Me.profileLogo.Size = New System.Drawing.Size(51, 53)
-        Me.profileLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.profileLogo.TabIndex = 25
-        Me.profileLogo.TabStop = False
+        Me.panelOrder.Controls.Add(Me.Panel8)
+        Me.panelOrder.Controls.Add(Me.Panel10)
+        Me.panelOrder.Location = New System.Drawing.Point(212, 99)
+        Me.panelOrder.Name = "panelOrder"
+        Me.panelOrder.Size = New System.Drawing.Size(1051, 581)
+        Me.panelOrder.TabIndex = 31
+        Me.panelOrder.Visible = False
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel8.Controls.Add(Me.btnOrder)
+        Me.Panel8.Controls.Add(Me.lblSeat)
+        Me.Panel8.Controls.Add(Me.lblPrice)
+        Me.Panel8.Controls.Add(Me.lblPax)
+        Me.Panel8.Controls.Add(Me.lblMovieName)
+        Me.Panel8.Controls.Add(Me.lblTicketID)
+        Me.Panel8.Controls.Add(Me.lblHall)
+        Me.Panel8.Controls.Add(Me.Label22)
+        Me.Panel8.Controls.Add(Me.Label21)
+        Me.Panel8.Controls.Add(Me.Label20)
+        Me.Panel8.Controls.Add(Me.Label19)
+        Me.Panel8.Controls.Add(Me.Label18)
+        Me.Panel8.Controls.Add(Me.Label17)
+        Me.Panel8.Controls.Add(Me.Label16)
+        Me.Panel8.Location = New System.Drawing.Point(25, 65)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(1001, 483)
+        Me.Panel8.TabIndex = 1
+        '
+        'btnOrder
+        '
+        Me.btnOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOrder.Location = New System.Drawing.Point(442, 355)
+        Me.btnOrder.Name = "btnOrder"
+        Me.btnOrder.Size = New System.Drawing.Size(131, 55)
+        Me.btnOrder.TabIndex = 13
+        Me.btnOrder.Text = "Confirm"
+        Me.btnOrder.UseVisualStyleBackColor = True
+        '
+        'lblSeat
+        '
+        Me.lblSeat.AutoSize = True
+        Me.lblSeat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSeat.Location = New System.Drawing.Point(704, 244)
+        Me.lblSeat.Name = "lblSeat"
+        Me.lblSeat.Size = New System.Drawing.Size(73, 20)
+        Me.lblSeat.TabIndex = 12
+        Me.lblSeat.Text = "Label23"
+        '
+        'lblPrice
+        '
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.ForeColor = System.Drawing.Color.Green
+        Me.lblPrice.Location = New System.Drawing.Point(482, 233)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(66, 20)
+        Me.lblPrice.TabIndex = 11
+        Me.lblPrice.Text = "Label24"
+        '
+        'lblPax
+        '
+        Me.lblPax.AutoSize = True
+        Me.lblPax.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPax.ForeColor = System.Drawing.Color.Green
+        Me.lblPax.Location = New System.Drawing.Point(482, 193)
+        Me.lblPax.Name = "lblPax"
+        Me.lblPax.Size = New System.Drawing.Size(66, 20)
+        Me.lblPax.TabIndex = 10
+        Me.lblPax.Text = "Label24"
+        '
+        'lblMovieName
+        '
+        Me.lblMovieName.AutoSize = True
+        Me.lblMovieName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMovieName.ForeColor = System.Drawing.Color.Green
+        Me.lblMovieName.Location = New System.Drawing.Point(481, 154)
+        Me.lblMovieName.Name = "lblMovieName"
+        Me.lblMovieName.Size = New System.Drawing.Size(66, 20)
+        Me.lblMovieName.TabIndex = 9
+        Me.lblMovieName.Text = "Label24"
+        '
+        'lblTicketID
+        '
+        Me.lblTicketID.AutoSize = True
+        Me.lblTicketID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTicketID.ForeColor = System.Drawing.Color.Green
+        Me.lblTicketID.Location = New System.Drawing.Point(481, 117)
+        Me.lblTicketID.Name = "lblTicketID"
+        Me.lblTicketID.Size = New System.Drawing.Size(66, 20)
+        Me.lblTicketID.TabIndex = 8
+        Me.lblTicketID.Text = "Label24"
+        '
+        'lblHall
+        '
+        Me.lblHall.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHall.Location = New System.Drawing.Point(702, 104)
+        Me.lblHall.Name = "lblHall"
+        Me.lblHall.Size = New System.Drawing.Size(61, 59)
+        Me.lblHall.TabIndex = 7
+        Me.lblHall.Text = "1"
+        Me.lblHall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label22
+        '
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(698, 211)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(75, 28)
+        Me.Label22.TabIndex = 6
+        Me.Label22.Text = "Seat No:"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label21
+        '
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(698, 76)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(75, 28)
+        Me.Label21.TabIndex = 5
+        Me.Label21.Text = "Hall"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label20
+        '
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(352, 229)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(124, 28)
+        Me.Label20.TabIndex = 4
+        Me.Label20.Text = "Price                   :"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label19
+        '
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(353, 189)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(123, 28)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "Pax                     :"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label18
+        '
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(348, 150)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(132, 28)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = "Movie Name      :"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label17
+        '
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(352, 113)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(123, 28)
+        Me.Label17.TabIndex = 1
+        Me.Label17.Text = "Ticket ID             :"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(412, 43)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(187, 31)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = "Order Details"
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.DarkGray
+        Me.Panel10.Controls.Add(Me.Label27)
+        Me.Panel10.Controls.Add(Me.backLogo3)
+        Me.Panel10.Location = New System.Drawing.Point(0, 0)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(1051, 39)
+        Me.Panel10.TabIndex = 0
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(65, 4)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(175, 31)
+        Me.Label27.TabIndex = 1
+        Me.Label27.Text = "Movie Name"
+        '
+        'backLogo3
+        '
+        Me.backLogo3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.backLogo3.Image = CType(resources.GetObject("backLogo3.Image"), System.Drawing.Image)
+        Me.backLogo3.Location = New System.Drawing.Point(6, 3)
+        Me.backLogo3.Name = "backLogo3"
+        Me.backLogo3.Size = New System.Drawing.Size(53, 33)
+        Me.backLogo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.backLogo3.TabIndex = 0
+        Me.backLogo3.TabStop = False
         '
         'Movie
         '
@@ -1206,6 +1207,7 @@ Partial Class Movie
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.ControlBox = False
+        Me.Controls.Add(Me.panelOrder)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -1218,26 +1220,18 @@ Partial Class Movie
         Me.Text = "Astronomia"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.signOutLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.overviewLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.movieLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.profileLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.MovieDetailsPanel.ResumeLayout(False)
         Me.panelHall.ResumeLayout(False)
-        Me.panelOrder.ResumeLayout(False)
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.MovieDetailsContainer.ResumeLayout(False)
-        Me.MovieDetailsBar.ResumeLayout(False)
-        Me.MovieDetailsBar.PerformLayout()
-        CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AstronomiaDb1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.backLogo3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1268,13 +1262,20 @@ Partial Class Movie
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.backLogo2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.MovieDetailsContainer.ResumeLayout(False)
+        Me.MovieDetailsBar.ResumeLayout(False)
+        Me.MovieDetailsBar.PerformLayout()
         CType(Me.backLogo1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.signOutLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.overviewLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.movieLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.profileLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._AstronomiaDb__1_DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AstronomiaDb1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelOrder.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        CType(Me.backLogo3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1311,7 +1312,6 @@ Partial Class Movie
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents backLogo2 As PictureBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -1357,12 +1357,11 @@ Partial Class Movie
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnConfirm As Button
+    Friend WithEvents Button1 As Button
     Friend WithEvents panelOrder As Panel
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label27 As Label
-    Friend WithEvents backLogo3 As PictureBox
-    Friend WithEvents Label16 As Label
+    Friend WithEvents btnOrder As Button
+    Friend WithEvents lblSeat As Label
     Friend WithEvents lblPrice As Label
     Friend WithEvents lblPax As Label
     Friend WithEvents lblMovieName As Label
@@ -1374,6 +1373,8 @@ Partial Class Movie
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents btnOrder As Button
-    Friend WithEvents lblSeat As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Label27 As Label
+    Friend WithEvents backLogo3 As PictureBox
 End Class
